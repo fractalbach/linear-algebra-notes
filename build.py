@@ -10,6 +10,7 @@ Converts .md files in the current directory to HTML and PDF files.
 import subprocess
 import re
 import os
+from datetime import date
 from string import Template
 
 MARKDOWN_DIR = 'md'
@@ -17,6 +18,7 @@ HTML_DIR     = 'html'
 PDF_DIR      = 'pdf'
 HTML_TEMPLATE_FILEPATH = "templates/htmlplate.html"
 HTML_TEMPLATE = None
+TODAY = date.today().isoformat()
 
 def init():
    global HTML_TEMPLATE
@@ -58,6 +60,7 @@ def makeHTML(filename):
     body = prog.stdout.decode('utf-8')
     fullHTML = HTML_TEMPLATE.substitute({
     	'BODY': body,
+        'TODAY': TODAY,
     })
     with open(output, 'w+') as f:
     	f.write(fullHTML)

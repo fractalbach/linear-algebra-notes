@@ -4,33 +4,42 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Linear Algebra Reference Sheet</title>
+<meta name="description" content="Awesome Reference Sheet for Linear Algebra! Ax=b! Check it out!"</description>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_SVG"></script>
 </head>
 
 <body>
 
-<header>
- <h1 id="headerTitle"> Linear Algebra Notes </h1>
-</header>
-
+<div id="paper">
+<header><span id="headerTitle"> Linear Algebra Notes </span></header>
 <main>
 <h1 id="definitions">Definitions</h1>
 <h2 id="vector-space">Vector Space</h2>
-<p>A vector space is a set <span class="math inline">\(V\)</span> with the following properties:</p>
-<div class="line-block"><strong>Commutativity</strong>:<br />
-      <span class="math inline">\(u+v=v+u\)</span> for all <span class="math inline">\(u,v \in V\)</span><br />
-<br />
-<strong>Associativity</strong>:<br />
-      <span class="math inline">\((u+v)+w = u+(v+w)\)</span> and <span class="math inline">\((ab)v=a(bv)\)</span> for all <span class="math inline">\(u,v,w \in V\)</span><br />
-<br />
-<strong>Additive Identity</strong>:<br />
-      there exists <span class="math inline">\(0 \in V\)</span> such that <span class="math inline">\(v+0=v\)</span> for all <span class="math inline">\(v\in V\)</span><br />
-<br />
-<strong>Multiplicative Identity</strong>:<br />
-      for all <span class="math inline">\(v\in V\)</span>, there exists <span class="math inline">\(w\in V\)</span> such that <span class="math inline">\(v+w=0\)</span><br />
-<br />
-<strong>Distributive Properties</strong>:<br />
-      <span class="math inline">\(a(u+v)=au+av\)</span> and <span class="math inline">\((a+b)v=av+bv\)</span> for all <span class="math inline">\(a,b\in \mathbb{R}\)</span> and <span class="math inline">\(u,v \in V\)</span></div>
+<p>Assume that <span class="math inline">\(u,v,w\)</span> are vectors in <span class="math inline">\(V\)</span>, and <span class="math inline">\(a,b,c\)</span> are scalars in <span class="math inline">\(\mathbb{R}\)</span>. A <strong>vector space</strong> is a set <span class="math inline">\(V\)</span> with the following properties:</p>
+<p><strong>Commutativity</strong>:</p>
+<ul>
+<li><span class="math inline">\(u+v=v+u\)</span></li>
+</ul>
+<p><strong>Associativity</strong>:</p>
+<ul>
+<li><span class="math inline">\((u+v)+w = u+(v+w)\)</span></li>
+<li><span class="math inline">\((ab)v=a(bv)\)</span></li>
+</ul>
+<p><strong>Additive Identity</strong>:</p>
+<ul>
+<li>there exists <span class="math inline">\(0 \in V\)</span> such that <span class="math inline">\(v+0=v\)</span> for all <span class="math inline">\(v\in V\)</span></li>
+</ul>
+<p><strong>Multiplicative Identity</strong>:</p>
+<ul>
+<li>for all <span class="math inline">\(v\in V\)</span>, there exists <span class="math inline">\(w\in V\)</span> such that <span class="math inline">\(v+w=0\)</span></li>
+</ul>
+<p><strong>Distributive Properties</strong>:</p>
+<ul>
+<li><span class="math inline">\(a(u+v)=au+av\)</span></li>
+<li><span class="math inline">\((a+b)v=av+bv\)</span></li>
+</ul>
 <h2 id="linear-combination">Linear Combination</h2>
 <p>A linear combination of a list of vectors <span class="math inline">\(v_1, \ldots, v_n\)</span> is itself a vector, taking the form: <span class="math display">\[
     a_1v_1 + \ldots + a_mv_m
@@ -61,45 +70,9 @@
 <p>TODO</p>
 
 </main>
-
-<footer>
- <p> Awesome notes made by Chris with the help of Python and Pandoc <p>
-</footer>
+<footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-17 <p></footer>
+</div>
 
 </body>
-
-<style>
-    html,body {
-        overflow-x: hidden;
-        margin:0;
-        padding:0;
-    }
-    header{
-        text-align: center;
-        border-bottom: 1px solid black;
-    }
-    main{
-        max-width: 40rem;
-        margin: 0 auto;
-        padding: 1%;
-        font-size: 1.25rem;
-        /* box-shadow:inset 0px 0px 5px black; */
-    }
-    footer{
-        text-align: center;
-        border-top: 1px solid black;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
-    #headerTitle{
-        font-size: 1.5rem;
-    }
-    .MathJax_SVG_Display {
-        overflow-x: auto;
-    }
-
-</style>
 
 </html>

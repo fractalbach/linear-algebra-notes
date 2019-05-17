@@ -1,0 +1,49 @@
+html,body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: #7d353a;
+}
+#paper {
+    border: 1px solid black;
+    max-width: 50em;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px 0px black;
+    background: white;
+}
+header{
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 0.5em;
+    font-variant: small-caps;
+    font-size: 2rem;
+    font-weight: bold;
+}
+main{
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 1%;
+    font-size: 1.25rem;
+    /* box-shadow:inset 0px 0px 5px black; */
+}
+footer{
+    text-align: center;
+    border-top: 1px solid black;
+}
+code{
+    white-space: pre-wrap;
+}
+span.smallcaps{
+    font-variant: small-caps;
+}
+span.underline{
+    text-decoration: underline;
+}
+div.column{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+.MathJax_SVG_Display {
+    overflow-x: auto;
+}
