@@ -4,7 +4,7 @@ Collection of Reference Sheets and Notes for Linear Algebra.  Includes definitio
 
 ## Table of Contents
 
-[**All Combined Notes** [PDF]](https://fractalbach.github.io/linear-algebra-notes/pdf/combined)
+[**All Combined Notes** [PDF]](pdf/combined.pdf)
 
 1. [**Defintions**](https://fractalbach.github.io/linear-algebra-notes/html/1defs.html)
 
