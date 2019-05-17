@@ -1,12 +1,10 @@
 # Linear Algebra Notes
 
-Collection of Reference Sheets and Notes for Linear Algebra.  Includes definitions and proofs.
+Collection of Reference Sheets and Notes for Linear Algebra.  Includes definitions and proofs. Available as both Webpages and PDF files.
 
 ## Table of Contents
 
-All pages are available as both a webpage and a PDF file.
-
-1. [Defintions](html/vec.html) ... [[PDF]](pdf/vec.pdf)
+1. [Defintions](https://fractalbach.github.io/linear-algebra-notes/html/vec.html) ---  [[PDF]](https://fractalbach.github.io/linear-algebra-notes/pdf/vec.pdf)
 
 
 
