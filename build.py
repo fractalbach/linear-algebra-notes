@@ -20,6 +20,7 @@ HTML_TEMPLATE_FILEPATH = "templates/htmlplate.html"
 HTML_TEMPLATE = None
 TODAY = date.today().isoformat()
 
+
 def init():
    global HTML_TEMPLATE
    with open(HTML_TEMPLATE_FILEPATH, 'r') as f:
@@ -27,10 +28,12 @@ def init():
 
 
 def main():
-    for mdFile in getMarkdownFiles():
+    listOfFilenames = getMarkdownFiles()
+    for mdFile in listOfFilenames:
         filename = stripFilenameExtention(mdFile)
         makeHTML(filename)
-        makePDF(filename)
+        # makePDF(filename)
+    makeCombinedPDF(listOfFilenames)
 
 
 def stripFilenameExtention(filename):
@@ -77,6 +80,17 @@ def makePDF(filename):
         '-o',
         output
     ]
+    subprocess.call(args)
+
+
+def makeCombinedPDF(listOfFiles):
+    outputPath = PDF_DIR + '/combined.pdf'
+    listOfFiles.sort()
+    print("building combined pdf", outputPath, "...")
+    args = ['pandoc', '-s']
+    for name in listOfFiles:
+        args.append(MARKDOWN_DIR + '/' + name)
+    args += ['-o', outputPath]
     subprocess.call(args)
 
 

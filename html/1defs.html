@@ -59,15 +59,53 @@
 \]</span> The list of vectors <span class="math inline">\(v_1,\ldots,v_n\)</span> is called <strong>linearly independent</strong> when <span class="math display">\[
     a_1=\cdots=a_n=0
 \]</span> for all possible values of <span class="math inline">\(v_1,\ldots,v_n\)</span>.</p>
+<h2 id="basis">Basis</h2>
+<p>A <strong>basis</strong> of V is a list of vectors in <span class="math inline">\(V\)</span> that is both linearly independent and spans <span class="math inline">\(V\)</span>.</p>
+<p>The <strong>Standard Basis</strong> of the vector space <span class="math inline">\(\mathbb{R^n}\)</span> is <span class="math display">\[
+    (1,0,\ldots,0) \space , \space
+    (0,1,\ldots,0) \space , \space
+    \ldots \space , \space  
+    (0,0,\ldots,1)
+\]</span> which could also be written, using matrix bracket notation, as: <span class="math display">\[
+    \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix},
+    \begin{bmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{bmatrix},
+    \ldots,
+    \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}
+\]</span></p>
+<h2 id="dimension">Dimension</h2>
+<p>The dimension of a vector space is the length of any basis of the vector space. For example, <span class="math display">\[
+    \text{dim } \mathbb{R^n} = n
+\]</span></p>
+<h2 id="linear-map">Linear Map</h2>
+<p>A linear map from vector space <span class="math inline">\(V\)</span> to vector space <span class="math inline">\(W\)</span> is a function <span class="math inline">\(T:V\to W\)</span> with the following properties:</p>
+<p><strong>Additivity</strong></p>
+<ul>
+<li><span class="math inline">\(T(u+v) = Tu + Tv\)</span> for all vectors <span class="math inline">\(u,w \in V\)</span></li>
+</ul>
+<p><strong>Homogeneity</strong></p>
+<ul>
+<li><span class="math inline">\(T(av) = a(Tv)\)</span> for all <span class="math inline">\(a\in \mathbb{R}\)</span> and all <span class="math inline">\(v\in V\)</span></li>
+</ul>
 <h2 id="inner-product">Inner Product</h2>
-<p>TODO</p>
-<h1 id="proofs">Proofs</h1>
-<h2 id="law-of-cosines">Law of Cosines</h2>
-<p>TODO</p>
-<h2 id="triangle-inequality">Triangle Inequality</h2>
-<p>TODO</p>
-<h3 id="cauchy-schwartz-inequality">Cauchy-Schwartz Inequality</h3>
-<p>TODO</p>
+<p>For a pair of vectors <span class="math inline">\(u,v \in V\)</span> in the same vector space (they are both in <span class="math inline">\(\mathbb{R}^n\)</span> for example), the Inner Product is defined as: <span class="math display">\[
+    u \cdot v = u_1v_1 + ... + u_nv_n
+\]</span> which is also sometimes written using angular brackets: <span class="math display">\[
+    \langle u, v \rangle
+\]</span> Keep in mind that the dimension of <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> must be the same. Using matrix dimension notation: <span class="math display">\[
+    u_{\{n \times 1\}} \cdot v_{\{n \times 1\}}
+\]</span></p>
+<h2 id="norm">Norm</h2>
+<p>The norm of a vector <span class="math inline">\(v\)</span> is defined: <span class="math display">\[
+    \| x \| = \sqrt{{x_1}^2 + \ldots + {x_n}^2}
+\]</span></p>
+<h2 id="linear-maps-and-matrices">Linear Maps and Matrices</h2>
+<p>Suppose <span class="math inline">\(M\)</span> is a linear map <span class="math inline">\(f: \mathbb{R}^a \to \mathbb{R}^b\)</span>, then <span class="math inline">\(M\)</span> can be written as <span class="math inline">\(b\)</span>-by-<span class="math inline">\(a\)</span> matrix: <span class="math display">\[
+    \begin{bmatrix}
+        x_{1,1} &amp; \cdots &amp; x_{1, a} \\
+        \vdots &amp; \vdots &amp; \vdots \\
+        x_{b, 1} &amp; \cdots &amp; x_{b, a}
+    \end{bmatrix}
+\]</span></p>
 
 </main>
 <footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-17 <p></footer>

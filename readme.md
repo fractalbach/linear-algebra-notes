@@ -4,7 +4,11 @@ Collection of Reference Sheets and Notes for Linear Algebra.  Includes definitio
 
 ## Table of Contents
 
-1. [Defintions](https://fractalbach.github.io/linear-algebra-notes/html/vec.html) ---  [[PDF]](https://fractalbach.github.io/linear-algebra-notes/pdf/vec.pdf)
+[All Combined Notes [PDF]]
+
+1. [Defintions](https://fractalbach.github.io/linear-algebra-notes/html/1defs.html)
+
+2. [Proofs](https://fractalbach.github.io/linear-algebra-notes/html/2proofs.html)
 
 
 

@@ -46,4 +46,5 @@ div.column{
 }
 .MathJax_SVG_Display {
     overflow-x: auto;
+    overflow-y: hidden;
 }
