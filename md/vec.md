@@ -1,7 +1,9 @@
 ---
-geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"
-classoptions: twocolumn
+geometry: "left=1.5cm,right=1.5cm,top=2cm,bottom=2cm"
+classoption: twocolumn
 pagetitle: Linear Algebra Notes
+header-includes: |
+    \pagestyle{headings}
 ---
 
 # Definitions
@@ -10,20 +12,20 @@ pagetitle: Linear Algebra Notes
 
 A vector space is a set $V$ with the following properties:
 
-**Commutativity**:   
-: $u+v=v+u$ for all $u,v \in V$
-
-**Associativity**:
-: $(u+v)+w = u+(v+w)$ and $(ab)v=a(bv)$ for all $u,v,w \in V$
-
-**Additive Identity**:
-: there exists $0 \in V$ such that $v+0=v$ for all $v\in V$
-
-**Multiplicative Identity**:
-: for all $v\in V$, there exists $w\in V$ such that $v+w=0$
-
-**Distributive Properties**:
-: $a(u+v)=au+av$ and $(a+b)v=av+bv$ for all $a,b\in \mathbb{R}$ and $u,v \in V$
+| **Commutativity**:  
+|       $u+v=v+u$ for all $u,v \in V$
+|
+| **Associativity**:  
+|       $(u+v)+w = u+(v+w)$ and $(ab)v=a(bv)$ for all $u,v,w \in V$
+|
+| **Additive Identity**:
+|       there exists $0 \in V$ such that $v+0=v$ for all $v\in V$
+|
+| **Multiplicative Identity**:  
+|       for all $v\in V$, there exists $w\in V$ such that $v+w=0$
+|
+| **Distributive Properties**:
+|       $a(u+v)=au+av$ and $(a+b)v=av+bv$ for all $a,b\in \mathbb{R}$ and $u,v \in V$
 
 ## Linear Combination
 
