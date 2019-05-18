@@ -76,6 +76,51 @@
 <p>The dimension of a vector space is the length of any basis of the vector space. For example, <span class="math display">\[
     \text{dim } \mathbb{R^n} = n
 \]</span></p>
+<h2 id="inner-product">Inner Product</h2>
+<p>For a pair of vectors <span class="math inline">\(u,v \in V\)</span> in the same vector space (they are both in <span class="math inline">\(\mathbb{R}^n\)</span> for example), the Inner Product is defined as: <span class="math display">\[
+    u \cdot v = u_1v_1 + ... + u_nv_n
+\]</span> which is also sometimes written using angular brackets: <span class="math display">\[
+    \langle u, v \rangle
+\]</span> Keep in mind that the dimension of <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> must be the same. Using matrix dimension notation: <span class="math display">\[
+    u_{\{n \times 1\}} \cdot v_{\{n \times 1\}}
+\]</span></p>
+<p>The <strong>Inner Product</strong> is also a function <span class="math inline">\(f: (\mathbb{R}^n, \mathbb{R}^n) \to \mathbb{R}\)</span>. The input is an ordered pair of vectors, and the output is a number. Inner products have the following properties:</p>
+<p><strong>Positivity</strong>:</p>
+<ul>
+<li><span class="math inline">\(\langle v, v \rangle \geq 0\)</span> for all <span class="math inline">\(v \in V\)</span></li>
+</ul>
+<p><strong>Definiteness</strong>:</p>
+<ul>
+<li><span class="math inline">\(\langle v, v \rangle = 0\)</span> if and only if <span class="math inline">\(v=0\)</span></li>
+</ul>
+<p><strong>Additivity in First Slot</strong>:</p>
+<ul>
+<li><span class="math inline">\(\langle u+v, w \rangle = \langle u,w \rangle + \langle v,w \rangle\)</span> for all <span class="math inline">\(u,v,w \in V\)</span></li>
+</ul>
+<p><strong>Homogeneity in First Slot</strong>:</p>
+<ul>
+<li><span class="math inline">\(\langle au, v \rangle = a \langle u,v \rangle\)</span> for all <span class="math inline">\(a \in \mathbb{R}\)</span> and all <span class="math inline">\(u,v \in V\)</span></li>
+</ul>
+<p>In another definition of the Inner Product, the concepts of “additivity” and “homogeneity” are combined into a concept called “linearity”. <strong>Bilinearity</strong> is when there is linearity in both the First and Second slots. Additionally, there is a concept called <strong>Symmetry</strong> for all real numbers.</p>
+<p>For <span class="math inline">\(x,y,z \in V\)</span> and <span class="math inline">\(a,b \in \mathbb{R}\)</span>:</p>
+<p><strong>Bilinearity</strong>:</p>
+<ul>
+<li>Additivity and Homogeneity in First and Second Slot:</li>
+<li><span class="math inline">\(\langle ax+by,\space z \rangle = a \langle x,z \rangle + b \langle y,z \rangle\)</span></li>
+<li><span class="math inline">\(\langle x ,\space ay+bz \rangle = a \langle x,y \rangle + b \langle x,z \rangle\)</span></li>
+</ul>
+<p><strong>Symmetry</strong>:</p>
+<ul>
+<li><span class="math inline">\(\langle x,y \rangle = \langle y,x \rangle\)</span></li>
+</ul>
+<h2 id="euclidean-norm">Euclidean Norm</h2>
+<p>The 2-norm, also called the Euclidean Norm, of a vector <span class="math inline">\(x\)</span> is defined: <span class="math display">\[
+    {\| x \|}_2 = \sqrt{{x_1}^2 + \ldots + {x_n}^2}
+\]</span></p>
+<h2 id="orthogonal">Orthogonal</h2>
+<p>Two vectors <span class="math inline">\(u,v \in V\)</span> are called <strong>orthogonal</strong> if the inner product between them is 0, <span class="math display">\[
+    \langle u, v \rangle = 0
+\]</span> you could also say “<span class="math inline">\(u\)</span> is orthogonal to <span class="math inline">\(v\)</span>”. Orthogonal is another way of saying “at right angles to each other”, or “perpendicular”.</p>
 <h2 id="linear-map">Linear Map</h2>
 <p>A linear map from vector space <span class="math inline">\(V\)</span> to vector space <span class="math inline">\(W\)</span> is a function <span class="math inline">\(T:V\to W\)</span> with the following properties:</p>
 <p><strong>Additivity</strong></p>
@@ -86,18 +131,6 @@
 <ul>
 <li><span class="math inline">\(T(av) = a(Tv)\)</span> for all <span class="math inline">\(a\in \mathbb{R}\)</span> and all <span class="math inline">\(v\in V\)</span></li>
 </ul>
-<h2 id="inner-product">Inner Product</h2>
-<p>For a pair of vectors <span class="math inline">\(u,v \in V\)</span> in the same vector space (they are both in <span class="math inline">\(\mathbb{R}^n\)</span> for example), the Inner Product is defined as: <span class="math display">\[
-    u \cdot v = u_1v_1 + ... + u_nv_n
-\]</span> which is also sometimes written using angular brackets: <span class="math display">\[
-    \langle u, v \rangle
-\]</span> Keep in mind that the dimension of <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> must be the same. Using matrix dimension notation: <span class="math display">\[
-    u_{\{n \times 1\}} \cdot v_{\{n \times 1\}}
-\]</span></p>
-<h2 id="norm">Norm</h2>
-<p>The norm of a vector <span class="math inline">\(v\)</span> is defined: <span class="math display">\[
-    \| x \| = \sqrt{{x_1}^2 + \ldots + {x_n}^2}
-\]</span></p>
 <h2 id="linear-maps-and-matrices">Linear Maps and Matrices</h2>
 <p>Suppose <span class="math inline">\(M\)</span> is a linear map <span class="math inline">\(f: \mathbb{R}^a \to \mathbb{R}^b\)</span>, then <span class="math inline">\(M\)</span> can be written as <span class="math inline">\(b\)</span>-by-<span class="math inline">\(a\)</span> matrix: <span class="math display">\[
     \begin{bmatrix}

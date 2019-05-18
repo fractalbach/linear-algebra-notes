@@ -107,6 +107,75 @@ $$
 $$
 
 
+Inner Product
+---------------------------------------------------------------------
+
+For a pair of vectors $u,v \in V$ in the same vector space (they are both in $\mathbb{R}^n$ for example), the Inner Product is defined as:
+$$
+    u \cdot v = u_1v_1 + ... + u_nv_n
+$$
+which is also sometimes written using angular brackets:
+$$
+    \langle u, v \rangle
+$$
+Keep in mind that the dimension of $u$ and $v$ must be the same.  Using matrix dimension notation:
+$$
+    u_{\{n \times 1\}} \cdot v_{\{n \times 1\}}
+$$
+
+The **Inner Product** is also a function $f: (\mathbb{R}^n, \mathbb{R}^n) \to \mathbb{R}$.  The input is an ordered pair of vectors, and the output is a number.  Inner products have the following properties:
+
+**Positivity**:
+
+* $\langle v, v \rangle \geq 0$ for all $v \in V$
+
+**Definiteness**:
+
+* $\langle v, v \rangle = 0$ if and only if $v=0$
+
+**Additivity in First Slot**:
+
+* $\langle u+v, w \rangle = \langle u,w \rangle + \langle v,w \rangle$ for all $u,v,w \in V$
+
+**Homogeneity in First Slot**:
+
+* $\langle au, v \rangle = a \langle u,v \rangle$ for all $a \in \mathbb{R}$ and all $u,v \in V$
+
+
+In another definition of the Inner Product, the concepts of "additivity" and "homogeneity" are combined into a concept called "linearity".  **Bilinearity** is when there is linearity in both the First and Second slots.  Additionally, there is a concept called **Symmetry** for all real numbers.
+
+For $x,y,z \in V$ and $a,b \in \mathbb{R}$:
+
+**Bilinearity**:
+
+* Additivity and Homogeneity in First and Second Slot:
+* $\langle ax+by,\space z \rangle = a \langle x,z \rangle + b \langle y,z \rangle$
+* $\langle x ,\space ay+bz \rangle = a \langle x,y \rangle + b \langle x,z \rangle$
+
+**Symmetry**:
+
+* $\langle x,y \rangle = \langle y,x \rangle$
+
+
+
+Euclidean Norm
+---------------------------------------------------------------------
+
+The 2-norm, also called the Euclidean Norm, of a vector $x$ is defined:
+$$
+    {\| x \|}_2 = \sqrt{{x_1}^2 + \ldots + {x_n}^2}
+$$
+
+
+
+Orthogonal
+---------------------------------------------------------------------
+
+Two vectors $u,v \in V$ are called **orthogonal** if the inner product between them is 0,
+$$
+    \langle u, v \rangle = 0
+$$
+you could also say "$u$ is orthogonal to $v$".  Orthogonal is another way of saying "at right angles to each other", or "perpendicular".
 
 Linear Map
 ---------------------------------------------------------------------
@@ -122,33 +191,9 @@ A linear map from vector space $V$ to vector space $W$ is a function $T:V\to W$ 
 * $T(av) = a(Tv)$ for all $a\in \mathbb{R}$ and all $v\in V$
 
 
-## Inner Product
 
-For a pair of vectors $u,v \in V$ in the same vector space (they are both in $\mathbb{R}^n$ for example), the Inner Product is defined as:
-$$
-    u \cdot v = u_1v_1 + ... + u_nv_n
-$$
-which is also sometimes written using angular brackets:
-$$
-    \langle u, v \rangle
-$$
-Keep in mind that the dimension of $u$ and $v$ must be the same.  Using matrix dimension notation:
-$$
-    u_{\{n \times 1\}} \cdot v_{\{n \times 1\}}
-$$
-
-
-## Norm
-
-The norm of a vector $v$ is defined:
-$$
-    \| x \| = \sqrt{{x_1}^2 + \ldots + {x_n}^2}
-$$
-
-
-
-
-## Linear Maps and Matrices
+Linear Maps and Matrices
+---------------------------------------------------------------------
 
 Suppose $M$ is a linear map $f: \mathbb{R}^a \to \mathbb{R}^b$, then $M$ can be written as $b$-by-$a$ matrix:
 $$
