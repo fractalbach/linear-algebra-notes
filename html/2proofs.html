@@ -17,10 +17,46 @@
 <main>
 <h1 id="proofs">Proofs</h1>
 <h2 id="law-of-cosines">Law of Cosines</h2>
-<p>TODO</p>
+<p>For any triangle with sides <span class="math inline">\(a,b,c\)</span>, The Law of Cosines states, <span class="math display">\[
+    c^2 = a^2 + b^2 - 2ab \cos{ \theta }
+\]</span> where the angle <span class="math inline">\(\angle a b = \theta\)</span>.</p>
+<p>To generalize to vectors, we take the Law of Cosines and make <strong>Cosine Formula for Inner Product</strong>. For vectors <span class="math inline">\(x,y \in V\)</span>, we can treat them as sides of the triangle:</p>
+<ul>
+<li><span class="math inline">\(a = \|x\|\)</span></li>
+<li><span class="math inline">\(b = \|y\|\)</span></li>
+<li><span class="math inline">\(c = \|x-y\|\)</span></li>
+</ul>
+<p>You can rewrite the Law of Cosines to say: <span class="math display">\[
+    {\|x-y\|}^2 \space = \space
+    {\|x\|}^2 + {\|y\|}^2 - 2\|x\|\|y\| \cos{ \theta }
+\]</span> <em>Proof</em>:</p>
+<p>Start with the definition of Inner Product, and apply its algebraic properties (notably the Bilinearity property), to show that Law of Cosines for Inner Products is correct. <span class="math display">\[
+    \begin{aligned}
+        &amp;  {\|x-y\|}^2 \\
+        &amp;=
+            \langle x-y , x-y \rangle
+            \\
+        &amp;=
+            \langle x, x-y \rangle - \langle y, x-y \rangle
+             \\
+        &amp;=
+            \left(\vphantom{\sum}
+                \langle x, x \rangle - \langle x, y\rangle
+            \right)
+            -
+            \left(\vphantom{\sum}
+                \langle y, x \rangle - \langle y, y\rangle\right)
+            \\
+        &amp;=
+            \langle x, x \rangle - \langle x, y\rangle
+            - \langle y, x \rangle + \langle y, y\rangle \\
+        &amp;=
+            {\|x\|}^2 - 2\langle x,y \rangle + \|y\|^2 \\
+    \end{aligned}
+\]</span> The Bilinearity property is used multiple times to break down the original 1 inner product into the 4 different ones. In the last step, the Symmetry property was used to get the term <span class="math inline">\(2\langle x,y \rangle\)</span>.</p>
 <h2 id="triangle-inequality">Triangle Inequality</h2>
 <p>TODO</p>
-<h3 id="cauchy-schwartz-inequality">Cauchy-Schwartz Inequality</h3>
+<h2 id="cauchy-schwartz-inequality">Cauchy-Schwartz Inequality</h2>
 <p>TODO</p>
 <h2 id="other">Other</h2>
 <p>For vectors <span class="math inline">\(u,v \in V\)</span> such that: <span class="math display">\[
@@ -28,7 +64,7 @@
 \]</span> Show that <span class="math inline">\(u,v\)</span> are orthogonal when <span class="math inline">\(\theta = 0\)</span>.</p>
 
 </main>
-<footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-17 <p></footer>
+<footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-18 <p></footer>
 </div>
 
 </body>

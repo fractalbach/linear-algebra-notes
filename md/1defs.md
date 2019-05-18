@@ -2,6 +2,7 @@
 geometry: "left=1.5cm,right=1.5cm,top=2cm,bottom=2cm"
 classoption: twocolumn
 pagetitle: Linear Algebra Notes
+numbersections: true
 header-includes: |
     \usepackage{euler}
     \pagestyle{headings}
