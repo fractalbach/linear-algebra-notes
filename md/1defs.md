@@ -103,7 +103,7 @@ Dimension
 
 The dimension of a vector space is the length of any basis of the vector space.  For example,
 $$
-    \text{dim } \mathbb{R^n} = n
+    \text{dim } \mathbb{R}^n = n
 $$
 
 
@@ -158,14 +158,30 @@ For $x,y,z \in V$ and $a,b \in \mathbb{R}$:
 
 
 
-Euclidean Norm
+Norm
 ---------------------------------------------------------------------
-
-The 2-norm, also called the Euclidean Norm, of a vector $x$ is defined:
+The Norm of a vector $x$ is defined as the square root inner product of $x$ with itself:
 $$
-    {\| x \|}_2 = \sqrt{{x_1}^2 + \ldots + {x_n}^2}
+    \|x\| = \sqrt{ \langle x,x \rangle }
 $$
+The Euclidean Norm, also called 2-norm, is defined:
+$$
+    {\| x \|}_2 = \sqrt{ {x_1}^2 + \ldots + {x_n}^2 }
+$$
+which has the following properties:
 
+**Positivity**:
+
+* $\|x\| \geq 0$
+* $\|x\|=0$ if and only if $x = 0$
+
+**Homogeneity**:
+
+* $\|ax\| = |a| \space \|x\|$ for all $a \in \mathbb{R}$
+
+**Triangle Inequality**:
+
+* $\|x+y\| \leq \|x\| + \|y\|$
 
 
 Orthogonal
