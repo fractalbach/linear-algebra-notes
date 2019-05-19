@@ -10,6 +10,7 @@ Collection of Reference Sheets and Notes for Linear Algebra.  Includes definitio
 
 2. [**Proofs**](https://fractalbach.github.io/linear-algebra-notes/html/2proofs.html)
 
+3. [**Tricks**](https://fractalbach.github.io/linear-algebra-notes/html/3matrixTricks.html)
 
 
 ## How It's Made

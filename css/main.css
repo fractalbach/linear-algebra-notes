@@ -16,8 +16,26 @@ header{
     border-bottom: 1px solid black;
     padding: 0.5em;
     font-variant: small-caps;
+}
+#HeaderTitle{
     font-size: 2rem;
     font-weight: bold;
+}
+#GoToHomepageLink {
+    padding: 0.25em;
+    font-size: 1.25rem;
+    border: 1px solid lightblue;
+}
+a {
+    color: darkblue;
+    background: #f9feff;
+    display: inline-block;
+}
+a:visited {
+    color: darkblue;
+}
+a:hover {
+    background: #d6ffd0;
 }
 main{
     max-width: 40rem;
