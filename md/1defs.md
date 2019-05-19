@@ -2,6 +2,7 @@
 geometry: "left=1.5cm,right=1.5cm,top=2cm,bottom=2cm"
 classoption: twocolumn
 pagetitle: Linear Algebra Notes
+author: Achenbach
 numbersections: true
 header-includes: |
     \usepackage{euler}
@@ -10,9 +11,10 @@ header-includes: |
     \usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyfoot[C]{}
-    \fancyfoot[L]{\scshape{Achenbach}}
+    \fancyfoot[L]{\scshape{a\ccPublicDomain henbach}}
     \fancyfoot[R]{\footnotesize{\ttfamily{github.com/fractalbach/linear-algebra-notes}}}
     \renewcommand{\footrulewidth}{0.4pt}
+    \usepackage{ccicons}
 ---
 
 
