@@ -1,5 +1,5 @@
 
-Tips n Tricks
+Tips and Tricks
 =====================================================================
 
 Extra things that are useful as a reference.
@@ -56,3 +56,9 @@ $$
     && \to \mathbb{R}^{1 \times n}
 \end{aligned}
 $$
+
+
+
+Matrix Operations
+---------------------------------------------------------------------
+TODO
