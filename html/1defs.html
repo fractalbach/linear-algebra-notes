@@ -17,27 +17,31 @@
 <main>
 <h1 id="definitions">Definitions</h1>
 <h2 id="vector-space">Vector Space</h2>
-<p>Assume that <span class="math inline">\(u,v,w\)</span> are vectors in <span class="math inline">\(V\)</span>, and <span class="math inline">\(a,b,c\)</span> are scalars in <span class="math inline">\(\mathbb{R}\)</span>. A <strong>vector space</strong> is a set <span class="math inline">\(V\)</span> with the following properties:</p>
-<p><strong>Commutativity</strong>:</p>
+<p>Assume that <span class="math inline">\(v,x,y,z\)</span> are vectors in <span class="math inline">\(V\)</span>, and <span class="math inline">\(a,b,c\)</span> are scalars in <span class="math inline">\(\mathbb{R}\)</span>. A <strong>vector space</strong> is a set <span class="math inline">\(V\)</span> with the following properties:</p>
+<p>Commutativity:</p>
 <ul>
-<li><span class="math inline">\(u+v=v+u\)</span></li>
+<li><span class="math inline">\(x+y=y+x\)</span></li>
 </ul>
-<p><strong>Associativity</strong>:</p>
+<p>Associativity:</p>
 <ul>
-<li><span class="math inline">\((u+v)+w = u+(v+w)\)</span></li>
+<li><span class="math inline">\((x+y)+z = x+(y+z)\)</span></li>
 <li><span class="math inline">\((ab)v=a(bv)\)</span></li>
 </ul>
-<p><strong>Additive Identity</strong>:</p>
+<p>Additive Identity:</p>
 <ul>
 <li>there exists <span class="math inline">\(0 \in V\)</span> such that <span class="math inline">\(v+0=v\)</span> for all <span class="math inline">\(v\in V\)</span></li>
 </ul>
-<p><strong>Multiplicative Identity</strong>:</p>
+<p>Additive Inverse:</p>
 <ul>
-<li>for all <span class="math inline">\(v\in V\)</span>, there exists <span class="math inline">\(w\in V\)</span> such that <span class="math inline">\(v+w=0\)</span></li>
+<li>for all <span class="math inline">\(v\in V\)</span>, there exists <span class="math inline">\(x\in V\)</span> such that <span class="math inline">\(v+x=0\)</span></li>
 </ul>
-<p><strong>Distributive Properties</strong>:</p>
+<p>Multiplicative Identity:</p>
 <ul>
-<li><span class="math inline">\(a(u+v)=au+av\)</span></li>
+<li><span class="math inline">\(1v = v\)</span></li>
+</ul>
+<p>Distributive Properties:</p>
+<ul>
+<li><span class="math inline">\(a(x+y)=ax+ay\)</span></li>
 <li><span class="math inline">\((a+b)v=av+bv\)</span></li>
 </ul>
 <h2 id="linear-combination">Linear Combination</h2>
@@ -45,7 +49,7 @@
     a_1v_1 + \ldots + a_mv_m
 \]</span> where each <span class="math inline">\(a_1, \ldots a_n \in \mathbb{R}\)</span></p>
 <h2 id="span">Span</h2>
-<p>The set of all linear combinations of a list of vectors <span class="math inline">\(v_1, \ldots, v_n\)</span> is called the <strong>span</strong> of <span class="math inline">\(v_1, \ldots, v_n\)</span>, or Span<span class="math inline">\((v_1, \ldots, v_n)\)</span>. Defined as: <span class="math display">\[
+<p>The set of all linear combinations of a list of vectors <span class="math inline">\(v_1, \ldots, v_n\)</span> is called the <strong>span</strong> of <span class="math inline">\(v_1, \ldots, v_n\)</span>, and is defined: <span class="math display">\[
     \text{span}(v_1,\ldots,v_n) =
     \left\{
         a_1v_1 + \cdots + a_nv_n
@@ -85,31 +89,31 @@
     u_{\{n \times 1\}} \cdot v_{\{n \times 1\}}
 \]</span></p>
 <p>The <strong>Inner Product</strong> is also a function <span class="math inline">\(f: (\mathbb{R}^n, \mathbb{R}^n) \to \mathbb{R}\)</span>. The input is an ordered pair of vectors, and the output is a number. Inner products have the following properties:</p>
-<p><strong>Positivity</strong>:</p>
+<p>Positivity:</p>
 <ul>
 <li><span class="math inline">\(\langle v, v \rangle \geq 0\)</span> for all <span class="math inline">\(v \in V\)</span></li>
 </ul>
-<p><strong>Definiteness</strong>:</p>
+<p>Definiteness:</p>
 <ul>
 <li><span class="math inline">\(\langle v, v \rangle = 0\)</span> if and only if <span class="math inline">\(v=0\)</span></li>
 </ul>
-<p><strong>Additivity in First Slot</strong>:</p>
+<p>Additivity in First Slot:</p>
 <ul>
 <li><span class="math inline">\(\langle u+v, w \rangle = \langle u,w \rangle + \langle v,w \rangle\)</span> for all <span class="math inline">\(u,v,w \in V\)</span></li>
 </ul>
-<p><strong>Homogeneity in First Slot</strong>:</p>
+<p>Homogeneity in First Slot:</p>
 <ul>
 <li><span class="math inline">\(\langle au, v \rangle = a \langle u,v \rangle\)</span> for all <span class="math inline">\(a \in \mathbb{R}\)</span> and all <span class="math inline">\(u,v \in V\)</span></li>
 </ul>
 <p>In another definition of the Inner Product, the concepts of “additivity” and “homogeneity” are combined into a concept called “linearity”. <strong>Bilinearity</strong> is when there is linearity in both the First and Second slots. Additionally, there is a concept called <strong>Symmetry</strong> for all real numbers.</p>
 <p>For <span class="math inline">\(x,y,z \in V\)</span> and <span class="math inline">\(a,b \in \mathbb{R}\)</span>:</p>
-<p><strong>Bilinearity</strong>:</p>
+<p>Bilinearity:</p>
 <ul>
 <li>Additivity and Homogeneity in First and Second Slot:</li>
 <li><span class="math inline">\(\langle ax+by,\space z \rangle = a \langle x,z \rangle + b \langle y,z \rangle\)</span></li>
 <li><span class="math inline">\(\langle x ,\space ay+bz \rangle = a \langle x,y \rangle + b \langle x,z \rangle\)</span></li>
 </ul>
-<p><strong>Symmetry</strong>:</p>
+<p>Symmetry:</p>
 <ul>
 <li><span class="math inline">\(\langle x,y \rangle = \langle y,x \rangle\)</span></li>
 </ul>
@@ -119,16 +123,16 @@
 \]</span> The Euclidean Norm, also called 2-norm, is defined: <span class="math display">\[
     {\| x \|}_2 = \sqrt{ {x_1}^2 + \ldots + {x_n}^2 }
 \]</span> which has the following properties:</p>
-<p><strong>Positivity</strong>:</p>
+<p>Positivity:</p>
 <ul>
 <li><span class="math inline">\(\|x\| \geq 0\)</span></li>
 <li><span class="math inline">\(\|x\|=0\)</span> if and only if <span class="math inline">\(x = 0\)</span></li>
 </ul>
-<p><strong>Homogeneity</strong>:</p>
+<p>Homogeneity:</p>
 <ul>
 <li><span class="math inline">\(\|ax\| = |a| \space \|x\|\)</span> for all <span class="math inline">\(a \in \mathbb{R}\)</span></li>
 </ul>
-<p><strong>Triangle Inequality</strong>:</p>
+<p>Triangle Inequality:</p>
 <ul>
 <li><span class="math inline">\(\|x+y\| \leq \|x\| + \|y\|\)</span></li>
 </ul>
@@ -138,11 +142,11 @@
 \]</span> you could also say “<span class="math inline">\(u\)</span> is orthogonal to <span class="math inline">\(v\)</span>”. Orthogonal is another way of saying “at right angles to each other”, or “perpendicular”.</p>
 <h2 id="linear-map">Linear Map</h2>
 <p>A linear map from vector space <span class="math inline">\(V\)</span> to vector space <span class="math inline">\(W\)</span> is a function <span class="math inline">\(T:V\to W\)</span> with the following properties:</p>
-<p><strong>Additivity</strong></p>
+<p>Additivity:</p>
 <ul>
 <li><span class="math inline">\(T(u+v) = Tu + Tv\)</span> for all vectors <span class="math inline">\(u,w \in V\)</span></li>
 </ul>
-<p><strong>Homogeneity</strong></p>
+<p>Homogeneity:</p>
 <ul>
 <li><span class="math inline">\(T(av) = a(Tv)\)</span> for all <span class="math inline">\(a\in \mathbb{R}\)</span> and all <span class="math inline">\(v\in V\)</span></li>
 </ul>

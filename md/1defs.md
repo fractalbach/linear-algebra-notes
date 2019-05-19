@@ -5,6 +5,7 @@ pagetitle: Linear Algebra Notes
 numbersections: true
 header-includes: |
     \usepackage{euler}
+    \usepackage{cancel}
     \pagestyle{headings}
 ---
 
@@ -15,28 +16,32 @@ Definitions
 Vector Space
 ---------------------------------------------------------------------
 
-Assume that $u,v,w$ are vectors in $V$, and $a,b,c$ are scalars in $\mathbb{R}$.  A **vector space** is a set $V$ with the following properties:
+Assume that $v,x,y,z$ are vectors in $V$, and $a,b,c$ are scalars in $\mathbb{R}$.  A **vector space** is a set $V$ with the following properties:
 
-**Commutativity**:  
+Commutativity:  
 
-* $u+v=v+u$
+* $x+y=y+x$
 
-**Associativity**:  
+Associativity:  
 
-* $(u+v)+w = u+(v+w)$
+* $(x+y)+z = x+(y+z)$
 * $(ab)v=a(bv)$
 
-**Additive Identity**:
+Additive Identity:
 
 * there exists $0 \in V$ such that $v+0=v$ for all $v\in V$
 
-**Multiplicative Identity**:  
+Additive Inverse:
 
-* for all $v\in V$, there exists $w\in V$ such that $v+w=0$
+* for all $v\in V$, there exists $x\in V$ such that $v+x=0$
 
-**Distributive Properties**:
+Multiplicative Identity:  
 
-* $a(u+v)=au+av$
+* $1v = v$
+
+Distributive Properties:
+
+* $a(x+y)=ax+ay$
 * $(a+b)v=av+bv$
 
 
@@ -53,7 +58,7 @@ where each $a_1, \ldots a_n \in \mathbb{R}$
 Span
 ---------------------------------------------------------------------
 
-The set of all linear combinations of a list of vectors $v_1, \ldots, v_n$ is called the **span** of $v_1, \ldots, v_n$, or Span$(v_1, \ldots, v_n)$.  Defined as:
+The set of all linear combinations of a list of vectors $v_1, \ldots, v_n$ is called the **span** of $v_1, \ldots, v_n$, and is defined:
 $$
     \text{span}(v_1,\ldots,v_n) =
     \left\{
@@ -126,19 +131,19 @@ $$
 
 The **Inner Product** is also a function $f: (\mathbb{R}^n, \mathbb{R}^n) \to \mathbb{R}$.  The input is an ordered pair of vectors, and the output is a number.  Inner products have the following properties:
 
-**Positivity**:
+Positivity:
 
 * $\langle v, v \rangle \geq 0$ for all $v \in V$
 
-**Definiteness**:
+Definiteness:
 
 * $\langle v, v \rangle = 0$ if and only if $v=0$
 
-**Additivity in First Slot**:
+Additivity in First Slot:
 
 * $\langle u+v, w \rangle = \langle u,w \rangle + \langle v,w \rangle$ for all $u,v,w \in V$
 
-**Homogeneity in First Slot**:
+Homogeneity in First Slot:
 
 * $\langle au, v \rangle = a \langle u,v \rangle$ for all $a \in \mathbb{R}$ and all $u,v \in V$
 
@@ -147,13 +152,13 @@ In another definition of the Inner Product, the concepts of "additivity" and "ho
 
 For $x,y,z \in V$ and $a,b \in \mathbb{R}$:
 
-**Bilinearity**:
+Bilinearity:
 
 * Additivity and Homogeneity in First and Second Slot:
 * $\langle ax+by,\space z \rangle = a \langle x,z \rangle + b \langle y,z \rangle$
 * $\langle x ,\space ay+bz \rangle = a \langle x,y \rangle + b \langle x,z \rangle$
 
-**Symmetry**:
+Symmetry:
 
 * $\langle x,y \rangle = \langle y,x \rangle$
 
@@ -171,16 +176,16 @@ $$
 $$
 which has the following properties:
 
-**Positivity**:
+Positivity:
 
 * $\|x\| \geq 0$
 * $\|x\|=0$ if and only if $x = 0$
 
-**Homogeneity**:
+Homogeneity:
 
 * $\|ax\| = |a| \space \|x\|$ for all $a \in \mathbb{R}$
 
-**Triangle Inequality**:
+Triangle Inequality:
 
 * $\|x+y\| \leq \|x\| + \|y\|$
 
@@ -199,11 +204,11 @@ Linear Map
 
 A linear map from vector space $V$ to vector space $W$ is a function $T:V\to W$ with the following properties:
 
-**Additivity**
+Additivity:
 
 * $T(u+v) = Tu + Tv$ for all vectors $u,w \in V$
 
-**Homogeneity**
+Homogeneity:
 
 * $T(av) = a(Tv)$ for all $a\in \mathbb{R}$ and all $v\in V$
 

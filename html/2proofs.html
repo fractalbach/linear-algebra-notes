@@ -16,20 +16,29 @@
 <header><span id="headerTitle"> Linear Algebra Notes </span></header>
 <main>
 <h1 id="proofs">Proofs</h1>
-<h2 id="law-of-cosines">Law of Cosines</h2>
+<h2 id="cosine-formula-for-inner-product">Cosine Formula for Inner Product</h2>
+<p>For two non-zero vectors <span class="math inline">\(x,y\in V\)</span>, <span class="math display">\[
+    \langle x,y \rangle = \|x\|\|y\| \cos{ \theta }
+\]</span> where the angle <span class="math inline">\(\angle x y = \theta\)</span>.</p>
+<p><em>Proof</em>:</p>
+<p>There are two cases we need to write a proof for.</p>
+<ul>
+<li>Case 1: when <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are not scalar multiples of each other.</li>
+<li>Case 2: when <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are scalar multiples.</li>
+</ul>
+<p><em>Case 1</em>:</p>
 <p>For any triangle with sides <span class="math inline">\(a,b,c\)</span>, The Law of Cosines states, <span class="math display">\[
     c^2 = a^2 + b^2 - 2ab \cos{ \theta }
-\]</span> where the angle <span class="math inline">\(\angle a b = \theta\)</span>.</p>
-<p>To generalize to vectors, we take the Law of Cosines and make <strong>Cosine Formula for Inner Product</strong>. For vectors <span class="math inline">\(x,y \in V\)</span>, we can treat them as sides of the triangle:</p>
-<ul>
-<li><span class="math inline">\(a = \|x\|\)</span></li>
-<li><span class="math inline">\(b = \|y\|\)</span></li>
-<li><span class="math inline">\(c = \|x-y\|\)</span></li>
-</ul>
-<p>You can rewrite the Law of Cosines to say: <span class="math display">\[
+\]</span> where the angle <span class="math inline">\(\angle a b = \theta\)</span>. For vectors <span class="math inline">\(x,y \in V\)</span>, we can treat them as sides of the triangle. Let: <span class="math display">\[
+    \begin{aligned}
+        a &amp;= \|x\| \\
+        b &amp;= \|y\| \\
+        c &amp;= \|x-y\| \\
+    \end{aligned}
+\]</span> Which allows us to rewrite the Law of Cosines: <span class="math display">\[
     {\|x-y\|}^2 \space = \space
     {\|x\|}^2 + {\|y\|}^2 - 2\|x\|\|y\| \cos{ \theta }
-\]</span> <em>Proof</em>:</p>
+\]</span></p>
 <p>Start with the definition of Inner Product, and apply its algebraic properties (notably the Bilinearity property), to show that Law of Cosines for Inner Products is correct. <span class="math display">\[
     \begin{aligned}
         &amp;  {\|x-y\|}^2 \\
@@ -53,7 +62,59 @@
         &amp;=
             {\|x\|}^2 - 2\langle x,y \rangle + \|y\|^2 \\
     \end{aligned}
-\]</span> The Bilinearity property is used multiple times to break down the original 1 inner product into the 4 different ones. In the last step, the Symmetry property was used to get the term <span class="math inline">\(2\langle x,y \rangle\)</span>.</p>
+\]</span> Returning to the Law of Cosines, <span class="math display">\[
+    \begin{aligned}
+             {\|x-y\|}^2 \space
+        &amp;= \space
+            {\|x\|}^2
+            + {\|y\|}^2
+            - 2\|x\|\|y\| \cos{ \theta }
+        \\
+            \cancel{ {\|x\|}^2}
+            - 2 \langle x,y \rangle
+            + \cancel{\|y\|^2}
+        &amp;=
+            \cancel{ {\|x\|}^2 }
+            +  \cancel{ {\|y\|}^2 }
+            - 2 \|x\|\|y\| \cos{ \theta }
+        \\
+            \cancel{-2} \langle x,y \rangle
+        &amp;=
+            \cancel{- 2} \|x\|\|y\| \cos{ \theta }
+        \\
+            \langle x,y \rangle
+        &amp;=
+            \|x\|\|y\| \cos{ \theta }
+    \end{aligned}
+\]</span> And this is what we were trying to show. <span class="math display">\[\tag*{$\Box$}\]</span></p>
+<p><em>Case 2</em>:</p>
+<p>Since <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are scalar multiples of each other, we can write, <span class="math display">\[
+    y = cx
+\]</span> for some scalar <span class="math inline">\(c\in \mathbb{R}\)</span> where <span class="math inline">\(c\neq 0\)</span> (since the theorem statement says that <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are “nonzero vectors”). Now, to find the value of <span class="math inline">\(\theta\)</span>, we look at the value of <span class="math inline">\(c\)</span>:</p>
+<ul>
+<li>If <span class="math inline">\(c &gt; 0\)</span>, then <span class="math inline">\(\theta = 0\)</span>, and <span class="math inline">\(\cos{\theta}=1\)</span></li>
+<li>If <span class="math inline">\(c &lt; 0\)</span>, then <span class="math inline">\(\theta = \pi\)</span>, and <span class="math inline">\(\cos{\theta}=-1\)</span></li>
+</ul>
+<p>Define the sign of <span class="math inline">\(c\)</span>, so that we can use it in our proof: <span class="math display">\[
+    \text{sign}(c) =
+    \left\{ \vphantom{\sum}
+        s \in \{-1,1\} \ : \ s = \cos{\theta}
+    \right\}
+\]</span> And here’s the proof: <span class="math display">\[
+\begin{aligned}
+    \langle x,y \rangle
+    &amp;= \langle cx, x \rangle \\
+    &amp;= c\langle x , x \rangle \\
+    &amp;= c {\| x \|}^2 \\
+    &amp;= c \|x\| \|x\| \\
+    &amp;= c \sqrt{({x_1}^2 + \ldots + {x_n}^2)} \ \|x\| \\
+    &amp;= \text{sign}(c) \sqrt{c^2 ({x_1}^2 + \ldots + {x_n}^2)} \ \|x\| \\
+    &amp;= \text{sign}(c) \sqrt{(c^2{x_1}^2 + \ldots + c^2{x_n}^2)} \ \|x\| \\
+    &amp;= \text{sign}(c) \sqrt{({y_1}^2 + \ldots + {y_n}^2)} \ \|x\| \\
+    &amp;= \text{sign}(c) \|y\| \|x\| \\
+    &amp;= \|x\| \|y\| \cos{\theta} \\
+\end{aligned}
+\]</span> <span class="math display">\[\tag*{$\Box$}\]</span></p>
 <h2 id="triangle-inequality">Triangle Inequality</h2>
 <p>TODO</p>
 <h2 id="cauchy-schwartz-inequality">Cauchy-Schwartz Inequality</h2>
