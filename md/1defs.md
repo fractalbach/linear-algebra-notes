@@ -97,7 +97,7 @@ Basis
 
 A **basis** of V is a list of vectors in $V$ that is both linearly independent and spans $V$.
 
-The **Standard Basis** of the vector space $\mathbb{R^n}$ is
+The **Standard Basis** of the vector space $\mathbb{R}^n$ is
 $$
     (1,0,\ldots,0) \space , \space
     (0,1,\ldots,0) \space , \space

@@ -67,7 +67,7 @@ $$
 Returning to the Law of Cosines,
 $$
     \begin{aligned}
-             {\|x-y\|}^2 \space
+            {\|x-y\|}^2 \space
         &= \space
             {\|x\|}^2
             + {\|y\|}^2
@@ -90,8 +90,7 @@ $$
             \|x\|\|y\| \cos{ \theta }
     \end{aligned}
 $$
-And this is what we were trying to show.
-$$\tag*{$\Box$}$$
+$\Box$
 
 *Case 2*:
 
@@ -127,7 +126,7 @@ $$
     &= \|x\| \|y\| \cos{\theta} \\
 \end{aligned}
 $$
-$$\tag*{$\Box$}$$
+$\Box$
 
 
 Triangle Inequality
