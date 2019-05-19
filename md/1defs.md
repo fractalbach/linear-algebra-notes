@@ -5,8 +5,8 @@ pagetitle: Linear Algebra Notes
 numbersections: true
 header-includes: |
     \usepackage{euler}
-    \usepackage{cancel}
     \pagestyle{headings}
+    \usepackage{cancel}
 ---
 
 
