@@ -7,6 +7,12 @@ header-includes: |
     \usepackage{euler}
     \pagestyle{headings}
     \usepackage{cancel}
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyfoot[C]{}
+    \fancyfoot[L]{\scshape{Achenbach}}
+    \fancyfoot[R]{\footnotesize{\ttfamily{github.com/fractalbach/linear-algebra-notes}}}
+    \renewcommand{\footrulewidth}{0.4pt}
 ---
 
 
