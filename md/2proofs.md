@@ -105,10 +105,7 @@ for some scalar $c\in \mathbb{R}$ where $c\neq 0$ (since the theorem statement s
 
 Define the sign of $c$, so that we can use it in our proof:
 $$
-    \text{sign}(c) =
-    \left\{ \vphantom{\sum}
-        s \in \{-1,1\} \ : \ s = \cos{\theta}
-    \right\}
+    \text{sign}(c) =  \cos{\theta}
 $$
 And here's the proof:
 $$
