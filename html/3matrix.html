@@ -24,10 +24,41 @@
 </header>
 <main>
 <h1 id="matrices">Matrices</h1>
-<p>Specific Things involving Matrices</p>
-<p>TODO see chapter 8 and 9.</p>
 <h2 id="algebraic-properties-of-matrices">Algebraic Properties of Matrices</h2>
-<p>TODO</p>
+<p>Compare these with the properties of Vector Space.</p>
+<p><em>Protip:</em> Matrices are in Vector Space.</p>
+<p>Commutativity:</p>
+<ul>
+<li><span class="math inline">\(A+B=B+A\)</span></li>
+</ul>
+<p>Associativity:</p>
+<ul>
+<li><span class="math inline">\(A+(B+C)=(A+B)+C\)</span></li>
+</ul>
+<p>Additive Identity:</p>
+<ul>
+<li><span class="math inline">\(A+0=A\)</span></li>
+</ul>
+<p>Additive Inverse:</p>
+<ul>
+<li><span class="math inline">\(A+(-A)=0\)</span></li>
+</ul>
+<p>Distributivity of matrix addition:</p>
+<ul>
+<li><span class="math inline">\(a(A+B) = aA+aB\)</span></li>
+</ul>
+<p>Distributivity of scalar addition:</p>
+<ul>
+<li><span class="math inline">\((a+b)A=aA+bA\)</span></li>
+</ul>
+<p>Associativity of scalar multiplication</p>
+<ul>
+<li><span class="math inline">\(a(bA)=(ab)A\)</span></li>
+</ul>
+<p>Multiplicative Identity of scalar multiplication</p>
+<ul>
+<li><span class="math inline">\(1A=A\)</span></li>
+</ul>
 <h2 id="algebraic-properties-of-matrix-transpose">Algebraic Properties of Matrix Transpose</h2>
 <ul>
 <li><span class="math inline">\((A^T)^T = A\)</span></li>
@@ -40,7 +71,8 @@
 <h2 id="special-notations">Special Notations</h2>
 <p>Entries</p>
 <ul>
-<li><span class="math inline">\(A_{i,j}\)</span> or <span class="math inline">\(A_{ij}\)</span> of matrix <span class="math inline">\(A\)</span> is the entry in the <span class="math inline">\(i^{\text{th}}\)</span> row and <span class="math inline">\(j^{\text{th}}\)</span> column.</li>
+<li><span class="math inline">\(A_{ij}\)</span> of matrix <span class="math inline">\(A\)</span> is the entry in the <span class="math inline">\(i^{\text{th}}\)</span> row and <span class="math inline">\(j^{\text{th}}\)</span> column.</li>
+<li>I like to use <span class="math inline">\(A_{i,j}\)</span> or <span class="math inline">\(A_{[i,j]}\)</span> depending on the situation.</li>
 </ul>
 <p>The <span class="math inline">\(1- \star - \times - 0\)</span> notation:</p>
 <ul>
@@ -49,13 +81,13 @@
 <li><span class="math inline">\(\times\)</span> : any number <span class="math inline">\(= \{c\in \mathbb{R}\}\)</span></li>
 <li><span class="math inline">\(0\)</span> : must be a 0</li>
 </ul>
-<p>MATLAB Commands:</p>
+<p>MATLAB Syntax and Commands:</p>
 <ul>
+<li><span class="math inline">\(\texttt{A(i,k)}\)</span> returns the entry <span class="math inline">\(A_{i,k}\)</span></li>
+<li><span class="math inline">\(\texttt{A(i,:)}\)</span> returns the <span class="math inline">\(i^{\text{th}}\)</span> row</li>
+<li><span class="math inline">\(\texttt{A(:,k)}\)</span> returns the <span class="math inline">\(k^{\text{th}}\)</span> column</li>
 <li><span class="math inline">\(\texttt{numel(A)}\)</span> returns the number of elements in matrix <span class="math inline">\(A\)</span></li>
 <li><span class="math inline">\(\texttt{nnz(A)}\)</span> returns the number of non-zero elements in <span class="math inline">\(A\)</span></li>
-<li><span class="math inline">\(\texttt{A(i,j)}\)</span> returns the entry <span class="math inline">\(A_{i,j}\)</span></li>
-<li><span class="math inline">\(\texttt{A(i,:)}\)</span> is the <span class="math inline">\(i^{\text{th}}\)</span> row</li>
-<li><span class="math inline">\(\texttt{A(:,j)}\)</span> is the <span class="math inline">\(j^{\text{th}}\)</span> column.</li>
 </ul>
 <h2 id="main-diagonal">Main Diagonal</h2>
 <p>For a matrix entry <span class="math inline">\(a_{i,k}\)</span>, the main diagonal entries would be defined as the set: <span class="math display">\[
@@ -145,13 +177,52 @@
     \end{bmatrix}
 \]</span> Quite similar to the Lower-Triangular Matrix definitions and examples.</p>
 <h2 id="bands-of-a-matrix">Bands of a Matrix</h2>
-<p>TODO</p>
-<h2 id="row-partition">Row Partition</h2>
-<p>TODO</p>
-<h2 id="column-partition">Column Partition</h2>
-<p>TODO</p>
+<p><em>Diagonal Band</em></p>
+<p>The <span class="math inline">\(d^{\text{th}}\)</span>-diagonal-band of a matrix <span class="math inline">\(A\)</span> is the set of entries: <span class="math display">\[
+    \text{d}^\text{th}\text{ diagonal band} = \{ A_{i,k} : i - k = d \}
+\]</span> For example, the 0-diagonal-band is the main diagonal, and the 2-band of <span class="math inline">\(A \in \mathbb{R}^3\)</span> would be: <span class="math display">\[
+    \left\{ A_{[0,2]}, A_{[1,1]}, A_{[2,0]} \right\}
+\]</span></p>
+<p>Upper-Triangular Bands :</p>
+<ul>
+<li>Set of entries</li>
+<li><span class="math inline">\(\left\{ A_{i,k} : i-k\leq 0 \right\}\)</span></li>
+</ul>
+<p>Lower-Triangular Bands :</p>
+<ul>
+<li>Set of entries</li>
+<li><span class="math inline">\(\left\{ A_{i,k} : k \geq 0 \right\}\)</span></li>
+</ul>
+<p>Lower Bandwidth :</p>
+<ul>
+<li>Number</li>
+<li><span class="math inline">\(d\)</span> such that <span class="math inline">\(A_{i,k}=0\)</span> for <span class="math inline">\((i-k&gt;d)\)</span>.</li>
+<li>The lowest band before everything becomes 0s.</li>
+</ul>
+<p>Upper Bandwidth:</p>
+<ul>
+<li>Number</li>
+<li><span class="math inline">\(d\)</span> such that <span class="math inline">\(A_{i,k}=0\)</span> for <span class="math inline">\((i-k&lt;d)\)</span>.</li>
+<li>The highest band before everything becomes 0s.</li>
+</ul>
 <h2 id="outer-product-of-vectors">Outer Product of Vectors</h2>
-<p>TODO</p>
+<p>For <span class="math inline">\(x \in \mathbb{R}^m, y \in \mathbb{R}^n\)</span> the outer product is defined, <span class="math display">\[
+\begin{aligned}
+    x \otimes y
+    &amp; =
+    xy^T =
+    \begin{bmatrix} x_1 \\ \vdots \\ x_m \end{bmatrix}
+    \begin{bmatrix} y_1 &amp; \cdots &amp; y_n \end{bmatrix}
+    =
+    \begin{bmatrix}
+        x_1y_1 &amp; \cdots &amp; x_1y_n \\
+        \vdots &amp; \vdots &amp; \vdots \\
+        x_my_1 &amp; \cdots &amp; x_my_n
+    \end{bmatrix}
+\end{aligned}
+\]</span> you could also say that the outer product is a function: <span class="math display">\[
+    (\mathbb{R}^m,  \mathbb{R}^n) \to \mathbb{R}^{m \times n}
+\]</span></p>
 <h2 id="rank-one-updates">Rank-one Updates</h2>
 <p>TODO</p>
 <h2 id="shear">Shear</h2>

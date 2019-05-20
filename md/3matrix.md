@@ -5,7 +5,41 @@ Matrices
 Algebraic Properties of Matrices
 ---------------------------------------------------------------------
 
-TODO
+Compare these with the properties of Vector Space.
+
+*Protip:* Matrices are in Vector Space.
+
+Commutativity:
+
+* $A+B=B+A$
+
+Associativity:
+
+* $A+(B+C)=(A+B)+C$
+
+Additive Identity:
+
+* $A+0=A$
+
+Additive Inverse:
+
+* $A+(-A)=0$
+
+Distributivity of matrix addition:
+
+* $a(A+B) = aA+aB$
+
+Distributivity of scalar addition:
+
+* $(a+b)A=aA+bA$
+
+Associativity of scalar multiplication
+
+* $a(bA)=(ab)A$
+
+Multiplicative Identity of scalar multiplication
+
+* $1A=A$
 
 
 
@@ -236,21 +270,29 @@ Upper Bandwidth:
 * The highest band before everything becomes 0s.
 
 
-
-Row Partition
----------------------------------------------------------------------
-TODO
-
-
-Column Partition
----------------------------------------------------------------------
-TODO
-
-
-
 Outer Product of Vectors
 ---------------------------------------------------------------------
-TODO
+
+For $x \in \mathbb{R}^m, y \in \mathbb{R}^n$ the outer product is defined,
+$$
+\begin{aligned}
+    x \otimes y
+    & =
+    xy^T =
+    \begin{bmatrix} x_1 \\ \vdots \\ x_m \end{bmatrix}
+    \begin{bmatrix} y_1 & \cdots & y_n \end{bmatrix}
+    =
+    \begin{bmatrix}
+        x_1y_1 & \cdots & x_1y_n \\
+        \vdots & \vdots & \vdots \\
+        x_my_1 & \cdots & x_my_n
+    \end{bmatrix}
+\end{aligned}
+$$
+you could also say that the outer product is a function:
+$$
+    (\mathbb{R}^m,  \mathbb{R}^n) \to \mathbb{R}^{m \times n}
+$$
 
 
 Rank-one Updates
