@@ -1,8 +1,8 @@
 ---
 geometry: "left=1.5cm,right=1.5cm,top=2cm,bottom=2cm"
-classoption: twocolumn
-pagetitle: Linear Algebra Notes
-author: Achenbach
+classoption: twocolumn, twoside
+<!-- title: My Awesome Linear Algebra Notes
+author: Chris Achenbach -->
 numbersections: true
 header-includes: |
     \usepackage{euler}
@@ -10,8 +10,11 @@ header-includes: |
     \usepackage{cancel}
     \usepackage{fancyhdr}
     \pagestyle{fancy}
+    \fancyhead{}
+    \fancyhead[OR, EL]{\thepage}
+    \fancyhead[C]{\scshape{Awesome Linear Algebra Notes}}
     \fancyfoot[C]{}
-    \fancyfoot[L]{\scshape{a\ccPublicDomain henbach}}
+    \fancyfoot[L]{\scshape{achenbach}}
     \fancyfoot[R]{\footnotesize{\ttfamily{github.com/fractalbach/linear-algebra-notes}}}
     \renewcommand{\footrulewidth}{0.4pt}
     \usepackage{ccicons}
@@ -24,9 +27,7 @@ Definitions
 Vector Space
 ---------------------------------------------------------------------
 
-A **vector space** is a set $V$ with the following properties:
-
-(Assume that $v,x,y,z$ are in $V$, and $a,b,c$ are scalars in $\mathbb{R}$)
+A **vector space** is a set $V$ with the following properties: (Assume that $v,x,y,z$ are in $V$, and $a,b,c$ are scalars in $\mathbb{R}$)
 
 Commutativity:  
 

@@ -87,7 +87,7 @@ def makeCombinedPDF(listOfFiles):
     outputPath = PDF_DIR + '/combined.pdf'
     listOfFiles.sort()
     print("building combined pdf", outputPath, "...")
-    args = ['pandoc', '-s']
+    args = ['pandoc', '-s', '--toc']
     for name in listOfFiles:
         args.append(MARKDOWN_DIR + '/' + name)
     args += ['-o', outputPath]
