@@ -72,7 +72,7 @@ $$
     f(x,y) = \left( \vphantom{\sum}
         x+2y, \enspace
         3x+4y, \enspace
-        5x+6
+        5x+6y
     \right)
 $$
 The function takes 2 elements as input and gives 3 elements as output,
