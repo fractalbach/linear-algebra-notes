@@ -76,6 +76,62 @@
 \]</span></p>
 <h2 id="matrix-operations">Matrix Operations</h2>
 <p>TODO</p>
+<h2 id="the-matrix-as-a-function">The Matrix as a Function</h2>
+<p>Let <span class="math inline">\(f\)</span> be a function: <span class="math display">\[
+    f(x,y) = \left( \vphantom{\sum}
+        x+2y, \enspace
+        3x+4y, \enspace
+        5x+6
+    \right)
+\]</span> The function takes 2 elements as input and gives 3 elements as output, <span class="math display">\[
+    f:\mathbb{R}^2 \to \mathbb{R}^3
+\]</span> Suppose <span class="math inline">\(x=1\)</span> and <span class="math inline">\(y=2\)</span>, <span class="math display">\[
+\begin{aligned}
+    &amp; f(1,2) \\
+    &amp; =
+        \left( \vphantom{\sum}
+            1 (1) + 2 (2), \enspace
+            3 (1) + 4 (2), \enspace
+            5 (1) + 6 (2)
+        \right)
+    \\
+    &amp; =
+        \left( 5, 11, 17 \right)
+\end{aligned}
+\]</span> We could rewrite the input list <span class="math inline">\((1,2)\)</span> and output list <span class="math inline">\((5,11,17)\)</span> as vectors, which reveals: <span class="math display">\[
+    f
+    \left(
+        \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+    \right)
+    =
+    \begin{bmatrix} 5 \\ 11 \\ 17 \end{bmatrix}
+\]</span> Now, let’s say that function <span class="math inline">\(f\)</span> is a Linear Map, <span class="math inline">\(A\)</span>, from <span class="math inline">\(\mathbb{R}^2\)</span> to <span class="math inline">\(\mathbb{R}^3\)</span>, and rewrite this in an algebraic form. <span class="math display">\[
+    A
+    \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+    =
+    \begin{bmatrix} 5 \\ 11 \\ 17 \end{bmatrix}
+\]</span> Looking back above to the function <span class="math inline">\(f\)</span>, we can use this to rewrite <span class="math inline">\(A\)</span> in a matrix notation. <span class="math display">\[
+    \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\ 5 &amp; 6 \end{bmatrix}
+    \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+    =
+    \begin{bmatrix} 5 \\ 11 \\ 17 \end{bmatrix}
+\]</span> At this point, compare and contrast the dimensions of the matrix with the function definition, <span class="math display">\[
+    \begin{aligned}
+        f : \; &amp; \mathbb{R}^2 \to \mathbb{R}^3 \\
+        A \in \; &amp; \mathbb{R}^{3 \times 2}
+    \end{aligned}
+\]</span> and compare and contrast the input and output: <span class="math display">\[
+\begin{aligned}
+    x \in \mathbb{R}^2 \\
+    Ax \in \mathbb{R}^{3}
+\end{aligned}
+\]</span> We can rewrite the function again. This time, let’s use our matrices to gain a new perspective of the nature of Linear Algebra: <span class="math display">\[
+    f(x,y) =
+    \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \\ 5 &amp; 6 \end{bmatrix}
+    \begin{bmatrix} x \\ y \end{bmatrix}
+    =
+    \begin{bmatrix} 1x + 2y \\ 3x + 4y \\ 5x + 6y \end{bmatrix}
+\]</span></p>
 
 </main>
 <footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-19 <p></footer>
