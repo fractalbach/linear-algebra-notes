@@ -120,10 +120,71 @@
     &amp;= \|x\| \|y\| \cos{\theta} \\
 \end{aligned}
 \]</span> <span class="math inline">\(\Box\)</span></p>
-<h2 id="triangle-inequality">Triangle Inequality</h2>
-<p>TODO</p>
+<h2 id="orthogonal-decomposition">Orthogonal Decomposition</h2>
+<p>Suppose <span class="math inline">\(u,v\in V\)</span> with <span class="math inline">\(v\neq 0\)</span>, Set: <span class="math display">\[
+    c = \dfrac{
+        \langle u, v \rangle
+    }{
+        \| v \| ^2
+    }
+\]</span> and <span class="math display">\[
+    w = u -\dfrac{
+        \langle u, v \rangle
+    }{
+        \| v \| ^2
+    }
+    v
+\]</span> Then <span class="math display">\[
+    \langle w,v\rangle = 0
+    \quad \text{ and } \quad
+    u=cv+w
+\]</span></p>
 <h2 id="cauchy-schwartz-inequality">Cauchy-Schwartz Inequality</h2>
-<p>TODO</p>
+<p><span class="math display">\[
+    \lvert {\langle x,y\rangle} \rvert
+    \leq
+    \|x\| \|y\|
+\]</span></p>
+<p><em>Proof</em>:</p>
+<p>If <span class="math inline">\(v=0\)</span>, then both sides of the inequality are equal to 0. If <span class="math inline">\(v\neq 0\)</span>, then consider the orthogonal decomposition: <span class="math display">\[
+    u = \dfrac{ \langle u,v \rangle }{ \|v\|^2 } v + w
+\]</span> where <span class="math inline">\(w\)</span> is orthogonal to <span class="math inline">\(v\)</span>. By the Pythagorean Theorem: <span class="math display">\[
+\begin{aligned}
+        \|u\|^2
+    &amp; =
+        \left\|
+            \dfrac{\langle u,v \rangle}{\|v\|^2}
+        \right\|
+        +
+        \| w\|^2
+        \\ \\
+    &amp;=
+        \dfrac
+            { \lvert \langle u,v \rangle \rvert ^2 }
+            { \|v\|^2 }
+        + \|w\|^2
+        \\ \\
+    &amp;\geq
+    \dfrac
+        { \lvert \langle u,v \rangle \rvert ^2 }
+        { \|v\|^2 }
+\end{aligned}
+\]</span></p>
+<h2 id="triangle-inequality">Triangle Inequality</h2>
+<p><span class="math display">\[
+    \| x + y \| \leq \|x\| + \|y\|
+\]</span></p>
+<p><em>Proof</em>:</p>
+<p><span class="math display">\[
+\begin{aligned}
+    {\|u+v\|}^2
+    &amp;= \langle x + y , x+y\rangle \\
+    &amp;= \langle x,x\rangle + \langle y.y\rangle
+        + \langle x,y\rangle + \langle y,x \rangle \\
+    &amp;= \|x\|^2 + \|y\|^2 + 2\lvert\langle x,y \rangle \rvert \\
+    &amp;\leq \|x\|^2 + \|y\|^2 + 2\|x\| \|y\|
+\end{aligned}
+\]</span></p>
 
 </main>
 <footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-20 <p></footer>

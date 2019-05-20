@@ -126,13 +126,95 @@ $$
 $\Box$
 
 
-Triangle Inequality
+
+Orthogonal Decomposition
 ---------------------------------------------------------------------
 
-TODO
+Suppose $u,v\in V$ with $v\neq 0$, Set:
+$$
+    c = \dfrac{
+        \langle u, v \rangle
+    }{
+        \| v \| ^2
+    }
+$$
+and
+$$
+    w = u -\dfrac{
+        \langle u, v \rangle
+    }{
+        \| v \| ^2
+    }
+    v
+$$
+Then
+$$
+    \langle w,v\rangle = 0
+    \quad \text{ and } \quad
+    u=cv+w
+$$
+
 
 
 Cauchy-Schwartz Inequality
 ---------------------------------------------------------------------
 
-TODO
+$$
+    \lvert {\langle x,y\rangle} \rvert
+    \leq
+    \|x\| \|y\|
+$$
+
+*Proof*:
+
+If $v=0$, then both sides of the inequality are equal to 0.  If $v\neq 0$, then consider the orthogonal decomposition:
+$$
+    u = \dfrac{ \langle u,v \rangle }{ \|v\|^2 } v + w
+$$
+where $w$ is orthogonal to $v$.  By the Pythagorean Theorem:
+$$
+\begin{aligned}
+        \|u\|^2
+    & =
+        \left\|
+            \dfrac{\langle u,v \rangle}{\|v\|^2}
+        \right\|
+        +
+        \| w\|^2
+        \\ \\
+    &=
+        \dfrac
+            { \lvert \langle u,v \rangle \rvert ^2 }
+            { \|v\|^2 }
+        + \|w\|^2
+        \\ \\
+    &\geq
+    \dfrac
+        { \lvert \langle u,v \rangle \rvert ^2 }
+        { \|v\|^2 }
+\end{aligned}
+$$
+
+
+
+
+
+Triangle Inequality
+---------------------------------------------------------------------
+
+$$
+    \| x + y \| \leq \|x\| + \|y\|
+$$
+
+*Proof*:
+
+$$
+\begin{aligned}
+    {\|u+v\|}^2
+    &= \langle x + y , x+y\rangle \\
+    &= \langle x,x\rangle + \langle y.y\rangle
+        + \langle x,y\rangle + \langle y,x \rangle \\
+    &= \|x\|^2 + \|y\|^2 + 2\lvert\langle x,y \rangle \rvert \\
+    &\leq \|x\|^2 + \|y\|^2 + 2\|x\| \|y\|
+\end{aligned}
+$$
