@@ -26,13 +26,141 @@
 <h1 id="applications">Applications</h1>
 <p>Examples of applying Linear Algebra to other things. Includes models made with Vectors and Matrices.</p>
 <h2 id="incidence-matrix-of-a-graph">Incidence Matrix of a Graph</h2>
-<p>TODO</p>
+<ul>
+<li>Rows = Edges</li>
+<li>Columns = Nodes</li>
+</ul>
+<p>Undirected Incidence Matrix:</p>
+<ul>
+<li>1 if an edge connects a node</li>
+<li>0 otherwise</li>
+</ul>
+<p>Directed Incident Matrix</p>
+<ul>
+<li>1 if edge pointing away from node. (leaves)</li>
+<li>-1 if edge is pointing inward to node. (enters)</li>
+<li>0 otherwise.</li>
+</ul>
 <h2 id="d-wireframe">3D Wireframe</h2>
-<p>TODO</p>
+<p>The Wireframe model has a list of vectors in <span class="math inline">\(\mathbb{R}^3\)</span>, where each corresponds to a position in the space. They are put together into a vertex table in <span class="math inline">\(\mathbb{R}^{3 \times n}\)</span> like so: <span class="math display">\[
+    \begin{bmatrix}
+    v_{1_x} &amp; \cdots &amp; v_{n_x} \\
+    v_{1_y} &amp; \cdots &amp; v_{n_y} \\
+    v_{1_z} &amp; \cdots &amp; v_{n_z}
+    \end{bmatrix}
+\]</span> They can be connected using an Wireframe Edgetable, where the vertex number corresponds to the column number from the table above. <span class="math display">\[
+    \begin{bmatrix}
+    \texttt{edge}_1 &amp; \texttt{StartVertex}_1 &amp; \texttt{EndVertex}_1 \\
+    \vdots &amp; \vdots &amp; \vdots \\
+    \texttt{edge}_m &amp; \texttt{StartVertex}_m &amp; \texttt{EndVertex}_m
+    \end{bmatrix}
+\]</span> This is enough information to create wireframes.</p>
 <h2 id="d-polygons">3D Polygons</h2>
-<p>TODO</p>
+<p>To create polygons, you also need to include a polygon face table <span class="math display">\[
+    \begin{bmatrix}
+    \texttt{face} &amp; \texttt{vertex1} &amp; \texttt{vertex2} &amp; \texttt{vertex3} \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots
+    \end{bmatrix}
+\]</span> with a matrix of faces and the vertices that generate them.</p>
 <h2 id="spring-mass-problem">Spring-Mass Problem</h2>
-<p>TODO</p>
+<ul>
+<li><span class="math inline">\(x_1(t)\)</span> : position of mass 1 at time <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(x_0\)</span> : vector of positions at time 0</li>
+<li><span class="math inline">\(x(t)\)</span> : vector of positions at time <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(u(t) = x(t) - x_0\)</span> : vector of <span class="math inline">\(\Delta x\)</span> between time 0 and <span class="math inline">\(t\)</span>.</li>
+<li>Let <span class="math inline">\(e(t)\)</span> be the “elongation” of the spring, the change in length of the spring between time 0 and <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(e(0)\)</span> would be set to 0 by default, since that is our point of reference for checking the change in length of the spring.</li>
+<li>To find the length of the spring, measure the distance between the two masses that hold the spring together (one of those might just be the ceiling). For your own sanity, try finding the initial length: <span class="math inline">\(l_0\)</span> and the final length: <span class="math inline">\(l_f\)</span>, then set <span class="math inline">\(e(t) = l_f - l_0\)</span>.</li>
+<li>Try to set <span class="math inline">\(e(t)\)</span> in terms of <span class="math inline">\(u(t)\)</span>.</li>
+</ul>
+<p><em>Finding <span class="math inline">\(e(t)\)</span></em>:</p>
+<p>However, it will be useful for this problem to define each <span class="math inline">\(e_i(t)\)</span> in terms of <span class="math inline">\(u_i(t)\)</span>, where <span class="math inline">\(i\)</span> represents one of the masses. <span class="math display">\[
+\begin{aligned}
+    e_1(t) &amp;= a_1u_1(t) + \ldots + a_nu_n(t) \\
+    e_2(t) &amp;= a_1u_1(t) + \ldots + a_nu_n(t) \\
+\end{aligned}
+\]</span> and so on, one equation for each of the springs. (With different values of <span class="math inline">\(a\)</span> in each equation). There are <span class="math inline">\(n\)</span> masses total, and each of them is an argument to the function. Thus, we are looking at a linear map here:</p>
+<ul>
+<li><span class="math inline">\(a_1,\ldots,a_n \in \mathbb{R}\)</span></li>
+<li>Let <span class="math inline">\(m\)</span> be the number of masses</li>
+<li>Let <span class="math inline">\(n\)</span> is the number of springs</li>
+<li>Notice that <span class="math inline">\(n=m+1\)</span> in this problem.</li>
+<li>Our linear map is from <span class="math inline">\(\mathbb{R}^m \to \mathbb{R}^n\)</span></li>
+</ul>
+<p>Which means we can write it as matrix: <span class="math display">\[
+    e(t) =
+    \begin{bmatrix} e_1(t) \\ \vdots \\ e_n(t) \end{bmatrix}
+    =
+    A_1 u_m(t) + \ldots A_m u_m(t)
+    = Au(t)
+\]</span> where <span class="math inline">\(A_1, \ldots, A_m \in \mathbb{R^n}\)</span> and <span class="math inline">\(A\in\mathbb{R^{m\times n} }\)</span></p>
+<p><em>Finding Forces</em>:</p>
+<ul>
+<li>Each mass has 3 forces acting upon it</li>
+<li><span class="math inline">\(f_s\)</span> is restoring force (going up) given by Hooke’s law.</li>
+</ul>
+<p>Find the restoring force <span class="math display">\[
+    f_s(t) =
+    \begin{bmatrix}
+        f_{s_1}(t) \\ \vdots \\ f_{s_n}(t)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        k_1e_1(t) \\ \vdots \\ k_ne_n(t)
+    \end{bmatrix}
+    =
+    e_1(t)\begin{bmatrix}k_1 \\ \vdots \\ 0 \end{bmatrix}
+    +
+    \cdots
+    +
+    e_n(t) \begin{bmatrix}0 \\ \vdots \\ k_n \end{bmatrix}
+\]</span> Find net internal forces <span class="math display">\[
+\begin{aligned}
+    y_1(t) &amp; = f_{s_2}(t) - f_{s_1}(t) \\
+    &amp; \vdots \\
+    y_m(t) &amp; = f_{s_{n} }(t) - f_{s_{(n-1)} }(t)
+\end{aligned}
+\]</span> Notice again that <span class="math inline">\(n=m+1\)</span> in this problem. Write each <span class="math inline">\(y_i(t)\)</span> for <span class="math inline">\(i\in[1,m]\)</span> as a combination of all forces <span class="math inline">\(f_s(t)\)</span>: <span class="math display">\[
+\begin{aligned}
+    y_{1(t)} &amp;= (-1)f_{s_1(t)} + (1)f_{s_2(t)} + \ldots + (0)f_{s_n(t)} \\
+    &amp; \vdots \\
+    y_{m(t)} &amp;=(0)f_{s_1(t)} + \ldots + (-1)f_{s_{(n-1)}(t)} + (1)f_{s_{n}(t)}
+\end{aligned}
+\]</span> Write the matrix version of <span class="math inline">\(y(t)\)</span>, (see the Trick: Matrix as a Function): <span class="math display">\[
+    y(t) =
+    \begin{bmatrix}
+        -1 &amp; 1 &amp; \cdots &amp; 0 \\
+        \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+        0 &amp; \cdots &amp; -1 &amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        f_{s_1(t)} \\
+        \vdots \\
+        f_{s_{(n-1)}(t)} \\
+        f_{s_n(t)}
+    \end{bmatrix}
+    =
+    -A^T f_{s}(t)
+\]</span> And, <span class="math display">\[
+\begin{aligned}
+    y(t) &amp;= -A^T f_s(t) \\
+    &amp;= -A^T Ce(t) \\
+    &amp;= -A^T CAu(t) \\
+    &amp;= -Ku(t)
+\end{aligned}
+\]</span> where <span class="math display">\[
+    K = A^T C A
+\]</span> and where <span class="math display">\[
+    C = \begin{bmatrix}
+    k_1 &amp; 0 &amp; \cdots &amp; 0 \\
+    0 &amp; k_2 &amp; \cdots &amp; 0 \\
+    \vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+    0 &amp; 0 &amp; \cdots &amp; k_n
+    \end{bmatrix}
+\]</span></p>
+<p>And eventually we get the net external forces, <span class="math display">\[
+    Ku(t) = F_e(t)
+\]</span> which is a function we can use to calculate the force <span class="math inline">\(F_e(t)\)</span> given the displacement vector <span class="math inline">\(u(t)\)</span>.</p>
 
 </main>
 <footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-20 <p></footer>
