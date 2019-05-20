@@ -24,7 +24,9 @@ Definitions
 Vector Space
 ---------------------------------------------------------------------
 
-Assume that $v,x,y,z$ are vectors in $V$, and $a,b,c$ are scalars in $\mathbb{R}$.  A **vector space** is a set $V$ with the following properties:
+A **vector space** is a set $V$ with the following properties:
+
+(Assume that $v,x,y,z$ are in $V$, and $a,b,c$ are scalars in $\mathbb{R}$)
 
 Commutativity:  
 
