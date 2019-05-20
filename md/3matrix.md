@@ -31,19 +31,31 @@ The Leading Entry of a row in a matrix the is first non-zero element in that row
 Special Notations
 ---------------------------------------------------------------------
 
-The $1- \star - \times - 0$ notation.
+Entries
+
+* $A_{i,j}$ or $A_{ij}$ of matrix $A$ is the entry in the $i^{\text{th}}$ row and $j^{\text{th}}$ column.
+
+
+The $1- \star - \times - 0$ notation:
 
 * $1$ : must be a 1
-* $\star$ : Non-zero values
-* $\times$ : any number
+* $\star$ : Non-zero numbers, $= \{c \in \mathbb{R} : c \neq 0\}$
+* $\times$ : any number $= \{c\in \mathbb{R}\}$
 * $0$ : must be a 0
 
+MATLAB Commands:
+
+* $\texttt{numel(A)}$ returns the number of elements in matrix $A$
+* $\texttt{nnz(A)}$ returns the number of non-zero elements in $A$
+* $\texttt{A(i,j)}$ returns the entry $A_{i,j}$
+* $\texttt{A(i,:)}$ is the $i^{\text{th}}$ row
+* $\texttt{A(:,j)}$ is the $j^{\text{th}}$ column.
 
 
 Main Diagonal
 ---------------------------------------------------------------------
 
-For a matrix $a_{i,k}$, the main diagonal would be defined as the set of entries:
+For a matrix entry $a_{i,k}$, the main diagonal entries would be defined as the set:
 $$
     \left\{
         a_{i,k} : i = k
@@ -82,27 +94,25 @@ $$
 Identity Matrix
 ---------------------------------------------------------------------
 
-An Identity Matrix is a matrix where all diagonal entries are 1, and all non-diagonal entries are 0.  For example,
+An Identity Matrix, denoted $I_n$ or just $I$,  is a square matrix in $\mathbb{R}^{n\times n}$ where all diagonal entries are 1, and all non-diagonal entries are 0.  For example,
 $$
+    I_3 =
     \begin{bmatrix}
     1 & 0 & 0 \\
     0 & 1 & 0 \\
     0 & 0 & 1
     \end{bmatrix}    
 $$
-The Identity matrix is a function $I : \mathbb{R}^n \to \mathbb{R}^n$ that maps to the same vector space it started from. It satisfies the existence of an identity for linear maps.  For all $v \in \mathbb{R}^n$,
+When used in Matrix Multiplication, for some matrix $A \in \mathbb{R}^{m \times n}$, the Identity Matrix has the property:
 $$
-    Iv = v
+    I_m A = A I_n = A
 $$
-Thus, the Identity Matrix needs to be a Square Matrix in $\mathbb{R}^{n\times n}$.
-
-
 
 
 Lower-Triangular Entries
 ---------------------------------------------------------------------
 
-*Lower-Triangular Entries* of a matrix are either on the diagonal are below the diagonal.  Defined as:
+*Lower-Triangular Entries* of a matrix are either: on the diagonal, or below the diagonal.
 $$
     \left\{
         L_{i,k} : i \geq k
@@ -130,9 +140,9 @@ $$
 For example, in this Lower-Triangular Matrix, $L \in \mathbb{R}^{3 \times 3}$,
 $$
     \begin{bmatrix}
-        \star & 0 & 0 \\
-        \star & \star & 0 \\
-        \star & \star & \star
+        \times & 0 & 0 \\
+        \times & \times & 0 \\
+        \times & \times & \times
     \end{bmatrix}
 $$
 the lower-triangular entries can be anything, and the rest must be 0.
@@ -153,8 +163,8 @@ An example of a Unit Lower-Triangular Matrix, $L \in \mathbb{R}^{3 \times 3}$,
 $$
     \begin{bmatrix}
         1 & 0 & 0 \\
-        \star & 1 & 0 \\
-        \star & \star & 1
+        \times & 1 & 0 \\
+        \times & \times & 1
     \end{bmatrix}
 $$
 
@@ -174,16 +184,16 @@ $$
 Upper-Triangular Matrix example:
 $$
     \begin{bmatrix}
-        \star & \star & \star \\
-        0 & \star & \star \\
-        0 & 0 & \star
+        \times & \times & \times \\
+        0 & \times & \times \\
+        0 & 0 & \times
     \end{bmatrix}
 $$
 Unit Upper-Triangular Matrix example:
 $$
     \begin{bmatrix}
-        1 & \star & \star \\
-        0 & 1 & \star \\
+        1 & \times & \times \\
+        0 & 1 & \times \\
         0 & 0 & 1
     \end{bmatrix}
 $$
