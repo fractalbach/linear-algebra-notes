@@ -224,17 +224,62 @@
     (\mathbb{R}^m,  \mathbb{R}^n) \to \mathbb{R}^{m \times n}
 \]</span></p>
 <h2 id="rank-one-updates">Rank-one Updates</h2>
-<p>TODO</p>
+<p>For <span class="math inline">\(A\in\mathbb{R}^{m\times n}, x \in \mathbb{R}^m, y \in \mathbb{R}^n\)</span>, the rank-one update is defined, <span class="math display">\[
+    A+xy^T
+\]</span></p>
 <h2 id="shear">Shear</h2>
-<p>TODO</p>
+<p>Shear matrices are Rank-One Updates to the Identity matrix. An <span class="math inline">\(n\times n\)</span> shear matrix is: <span class="math display">\[
+    S_{[i,k]}(c) = I_n + c \ \textbf{e}_i ({\textbf{e}_k}^T)
+\]</span> where <span class="math inline">\(\textbf{e}\)</span> is the standard basis, and <span class="math inline">\(i\neq k\)</span>.</p>
+<p>Example: where <span class="math inline">\(i=3, k=1, c=-5, n=3\)</span>, <span class="math display">\[
+\begin{aligned}
+     S_{[3,1]}(-5)
+    &amp; =
+        I_3 + -5 \textbf{e}_3 ({\textbf{e}_1}^T)  \\ \\
+    &amp; =
+        \begin{bmatrix}
+            1 &amp; 0 &amp; 0 \\
+            0 &amp; 1 &amp; 0 \\
+            0 &amp; 0 &amp; 1
+        \end{bmatrix}
+        + -5
+        \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+        \begin{bmatrix} 1 &amp; 0 &amp; 0 \end{bmatrix}
+        \\ \\
+    &amp; =
+        \begin{bmatrix}
+            1 &amp; 0 &amp; 0 \\
+            0 &amp; 1 &amp; 0 \\
+            -5 &amp; 0 &amp; 1
+        \end{bmatrix}
+\end{aligned}
+\]</span></p>
 <h2 id="dilation">Dilation</h2>
-<p>TODO</p>
+<p>For <span class="math inline">\(n\in \mathbb{N}, \enspace j \in \mathbb{N}, \enspace j \leq n\)</span>, define an <span class="math inline">\(n\times n\)</span> dilation matrix to be: <span class="math display">\[
+    D_j(c)=I_n+(c-1)e_j({e_j}^T)
+\]</span></p>
 <h2 id="transposition">Transposition</h2>
-<p>TODO</p>
-<h2 id="givens-rotation">Givens Rotation</h2>
-<p>TODO</p>
+<p>For <span class="math inline">\(n \in \mathbb{N}, \enspace i\neq k\)</span>, define the <span class="math inline">\(n \times n\)</span> transposition matrix to be: <span class="math display">\[
+    P_{[i,k]} = e_i({e_k}^T) + e_k({e_i}^T)+\sum_{\substack{j=1 \\ j\neq k}}^n e_j ({e_j}^T)
+\]</span> Example: <span class="math display">\[
+    P_{[2,4]} =
+    \begin{bmatrix}
+        1 &amp; 0 &amp; 0 &amp; 0 \\
+        0 &amp; 0 &amp; 0 &amp; 1 \\
+        0 &amp; 0 &amp; 1 &amp; 0 \\
+        0 &amp; 1 &amp; 0 &amp; 0 \\
+    \end{bmatrix}
+\]</span></p>
 <h2 id="gauss-transform">Gauss Transform</h2>
-<p>TODO</p>
+<p>Let <span class="math inline">\(n,k \in \mathbb{N}, \enspace k&lt;n, \enspace T\in\mathbb{R}^n\)</span>, where T is a vector whose first <span class="math inline">\(k\)</span> components are zero. <span class="math display">\[
+    T^T =
+    \begin{bmatrix}
+        0 &amp; \cdots &amp;
+        T_{k+1} &amp; \cdots &amp; T_n
+    \end{bmatrix}
+\]</span> The Gauss Transformation is a matrix <span class="math display">\[
+    L_k = I_n - T({e_k}^T)
+\]</span></p>
 
 </main>
 <footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-20 <p></footer>

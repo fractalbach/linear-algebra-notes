@@ -297,29 +297,82 @@ $$
 
 Rank-one Updates
 ---------------------------------------------------------------------
-TODO
+For $A\in\mathbb{R}^{m\times n}, x \in \mathbb{R}^m, y \in \mathbb{R}^n$, the rank-one update is defined,
+$$
+    A+xy^T
+$$
 
 
 Shear
 ---------------------------------------------------------------------
-TODO
+Shear matrices are Rank-One Updates to the Identity matrix. An $n\times n$ shear matrix is:
+$$
+    S_{[i,k]}(c) = I_n + c \ \textbf{e}_i ({\textbf{e}_k}^T)
+$$
+where $\textbf{e}$ is the standard basis, and $i\neq k$.
+
+Example: where $i=3, k=1, c=-5, n=3$,
+$$
+\begin{aligned}
+     S_{[3,1]}(-5)
+    & =
+        I_3 + -5 \textbf{e}_3 ({\textbf{e}_1}^T)  \\ \\
+    & =
+        \begin{bmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
+        \end{bmatrix}
+        + -5
+        \begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}
+        \begin{bmatrix} 1 & 0 & 0 \end{bmatrix}
+        \\ \\
+    & =
+        \begin{bmatrix}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            -5 & 0 & 1
+        \end{bmatrix}
+\end{aligned}
+$$
 
 
 Dilation
 ---------------------------------------------------------------------
-TODO
-
+For $n\in \mathbb{N}, \enspace j \in \mathbb{N}, \enspace j \leq n$, define an $n\times n$ dilation matrix to be:
+$$
+    D_j(c)=I_n+(c-1)e_j({e_j}^T)
+$$
 
 Transposition
 ---------------------------------------------------------------------
-TODO
-
-
-Givens Rotation
----------------------------------------------------------------------
-TODO
+For $n \in \mathbb{N}, \enspace i\neq k$, define the $n \times n$ transposition matrix to be:
+$$
+    P_{[i,k]} = e_i({e_k}^T) + e_k({e_i}^T)+\sum_{\substack{j=1 \\ j\neq k}}^n e_j ({e_j}^T)
+$$
+Example:
+$$
+    P_{[2,4]} =
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+    \end{bmatrix}
+$$
 
 
 Gauss Transform
 ---------------------------------------------------------------------
-TODO
+Let $n,k \in \mathbb{N}, \enspace k<n, \enspace T\in\mathbb{R}^n$, where T is a vector whose first $k$ components are zero.
+$$
+    T^T =
+    \begin{bmatrix}
+        0 & \cdots &
+        T_{k+1} & \cdots & T_n
+    \end{bmatrix}
+$$
+The Gauss Transformation is a matrix
+$$
+    L_k = I_n - T({e_k}^T)
+$$
