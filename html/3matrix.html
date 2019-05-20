@@ -35,28 +35,102 @@
 <li><span class="math inline">\((cA)^T = cA^T\)</span></li>
 <li><span class="math inline">\((AB)^T = B^T A^T\)</span></li>
 </ul>
-<h2 id="special-notations">Special Notations</h2>
-<p>TODO</p>
-<ul>
-<li>MATLAB notation</li>
-<li></li>
-</ul>
 <h2 id="leading-entry">Leading Entry</h2>
-<p>The Leading Entry of a row in a matrix the first non-zero element.</p>
-<h2 id="sparsity">Sparsity</h2>
-<p>TODO</p>
+<p>The Leading Entry of a row in a matrix the is first non-zero element in that row (from left-to-right).</p>
+<h2 id="special-notations">Special Notations</h2>
+<p>The <span class="math inline">\(1- \star - \times - 0\)</span> notation.</p>
+<ul>
+<li><span class="math inline">\(1\)</span> : must be a 1</li>
+<li><span class="math inline">\(\star\)</span> : Non-zero values</li>
+<li><span class="math inline">\(\times\)</span> : any number</li>
+<li><span class="math inline">\(0\)</span> : must be a 0</li>
+</ul>
 <h2 id="main-diagonal">Main Diagonal</h2>
-<p>TODO</p>
+<p>For a matrix <span class="math inline">\(a_{i,k}\)</span>, the main diagonal would be defined as the set of entries: <span class="math display">\[
+    \left\{
+        a_{i,k} : i = k
+    \right\}
+\]</span> In the following example, the Main Diagonal would be the 1s: <span class="math display">\[
+    \begin{bmatrix}
+    1 &amp; 0 &amp; 0 \\
+    0 &amp; 1 &amp; 0 \\
+    0 &amp; 0 &amp; 1
+    \end{bmatrix}
+\]</span></p>
+<p><em>Non-Diagonal</em> entries are all values that are <em>not</em> in the main diagonal: <span class="math display">\[
+    \left\{ a_{i,k} : i \neq k \right\}
+\]</span></p>
 <h2 id="diagonal-matrix">Diagonal Matrix</h2>
-<p>TODO</p>
+<p>Diagonal Matrix is a matrix where all non-diagonal entries are 0.</p>
+<p>For example, the following is a Diagonal Matrix: <span class="math display">\[
+    \begin{bmatrix}
+    \star &amp; 0 &amp; 0 \\
+    0 &amp; \star &amp; 0 \\
+    0 &amp; 0 &amp; \star
+    \end{bmatrix}    
+\]</span></p>
 <h2 id="identity-matrix">Identity Matrix</h2>
-<p>TODO</p>
+<p>An Identity Matrix is a matrix where all diagonal entries are 1, and all non-diagonal entries are 0. For example, <span class="math display">\[
+    \begin{bmatrix}
+    1 &amp; 0 &amp; 0 \\
+    0 &amp; 1 &amp; 0 \\
+    0 &amp; 0 &amp; 1
+    \end{bmatrix}    
+\]</span> The Identity matrix is a function <span class="math inline">\(I : \mathbb{R}^n \to \mathbb{R}^n\)</span> that maps to the same vector space it started from. It satisfies the existence of an identity for linear maps. For all <span class="math inline">\(v \in \mathbb{R}^n\)</span>, <span class="math display">\[
+    Iv = v
+\]</span> Thus, the Identity Matrix needs to be a Square Matrix in <span class="math inline">\(\mathbb{R}^{n\times n}\)</span>.</p>
+<h2 id="lower-triangular-entries">Lower-Triangular Entries</h2>
+<p><em>Lower-Triangular Entries</em> of a matrix are either on the diagonal are below the diagonal. Defined as: <span class="math display">\[
+    \left\{
+        L_{i,k} : i \geq k
+    \right\}
+\]</span></p>
+<p><em>Strictly Lower-Triangular Entries</em> of a matrix are only the values below the diagonal: <span class="math display">\[
+    \left\{
+        L_{i,k} : i &gt; k
+    \right\}
+\]</span></p>
 <h2 id="lower-triangular-matrix">Lower-Triangular Matrix</h2>
-<p>TODO</p>
+<p>A Lower-Triangular Matrix, <span class="math inline">\(L \in \mathbb{R}^{n \times n}\)</span>, is a square matrix such that <span class="math display">\[
+    L_{i,k} = 0 \quad \text{for all } i &lt; k
+\]</span> For example, in this Lower-Triangular Matrix, <span class="math inline">\(L \in \mathbb{R}^{3 \times 3}\)</span>, <span class="math display">\[
+    \begin{bmatrix}
+        \star &amp; 0 &amp; 0 \\
+        \star &amp; \star &amp; 0 \\
+        \star &amp; \star &amp; \star
+    \end{bmatrix}
+\]</span> the lower-triangular entries can be anything, and the rest must be 0.</p>
 <h2 id="unit-lower-triangular-matrix">Unit Lower-Triangular Matrix</h2>
-<p>TODO</p>
+<p>The Unit Lower-Triangular Matrix, <span class="math inline">\(L \in \mathbb{R}^{n \times n}\)</span> is both: <span class="math display">\[
+    \begin{aligned}
+        L_{i,k} = 1  &amp;&amp; \quad \text{for all } i=k \\
+        L_{i,k} = 0  &amp;&amp; \quad \text{for all } i &lt; k
+    \end{aligned}
+\]</span> An example of a Unit Lower-Triangular Matrix, <span class="math inline">\(L \in \mathbb{R}^{3 \times 3}\)</span>, <span class="math display">\[
+    \begin{bmatrix}
+        1 &amp; 0 &amp; 0 \\
+        \star &amp; 1 &amp; 0 \\
+        \star &amp; \star &amp; 1
+    \end{bmatrix}
+\]</span></p>
 <h2 id="upper-triangular-matrix">Upper-Triangular Matrix</h2>
-<p>TODO</p>
+<p>Upper-Triangular Entries are defined as: <span class="math display">\[
+    \left\{ U_{i,k} : i \leq k \right\}
+\]</span> Strictly-Upper-Triangular Entries are defined as: <span class="math display">\[
+    \left\{ U_{i,k} : i &lt; k \right\}
+\]</span> Upper-Triangular Matrix example: <span class="math display">\[
+    \begin{bmatrix}
+        \star &amp; \star &amp; \star \\
+        0 &amp; \star &amp; \star \\
+        0 &amp; 0 &amp; \star
+    \end{bmatrix}
+\]</span> Unit Upper-Triangular Matrix example: <span class="math display">\[
+    \begin{bmatrix}
+        1 &amp; \star &amp; \star \\
+        0 &amp; 1 &amp; \star \\
+        0 &amp; 0 &amp; 1
+    \end{bmatrix}
+\]</span> Quite similar to the Lower-Triangular Matrix definitions and examples.</p>
 <h2 id="bands-of-a-matrix">Bands of a Matrix</h2>
 <p>TODO</p>
 <h2 id="row-partition">Row Partition</h2>
