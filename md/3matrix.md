@@ -2,15 +2,11 @@
 Matrices
 =====================================================================
 
-Specific Things involving Matrices
-
-TODO see chapter 8 and 9.
-
-
-
 Algebraic Properties of Matrices
 ---------------------------------------------------------------------
+
 TODO
+
 
 
 Algebraic Properties of Matrix Transpose
@@ -33,7 +29,8 @@ Special Notations
 
 Entries
 
-* $A_{i,j}$ or $A_{ij}$ of matrix $A$ is the entry in the $i^{\text{th}}$ row and $j^{\text{th}}$ column.
+* $A_{ij}$ of matrix $A$ is the entry in the $i^{\text{th}}$ row and $j^{\text{th}}$ column.
+* I like to use $A_{i,j}$ or $A_{[i,j]}$ depending on the situation.
 
 
 The $1- \star - \times - 0$ notation:
@@ -43,13 +40,14 @@ The $1- \star - \times - 0$ notation:
 * $\times$ : any number $= \{c\in \mathbb{R}\}$
 * $0$ : must be a 0
 
-MATLAB Commands:
+MATLAB Syntax and Commands:
 
+* $\texttt{A(i,k)}$ returns the entry $A_{i,k}$
+* $\texttt{A(i,:)}$ returns the $i^{\text{th}}$ row
+* $\texttt{A(:,k)}$ returns the $k^{\text{th}}$ column
 * $\texttt{numel(A)}$ returns the number of elements in matrix $A$
 * $\texttt{nnz(A)}$ returns the number of non-zero elements in $A$
-* $\texttt{A(i,j)}$ returns the entry $A_{i,j}$
-* $\texttt{A(i,:)}$ is the $i^{\text{th}}$ row
-* $\texttt{A(:,j)}$ is the $j^{\text{th}}$ column.
+
 
 
 Main Diagonal
@@ -199,9 +197,44 @@ $$
 $$
 Quite similar to the Lower-Triangular Matrix definitions and examples.
 
+
+
 Bands of a Matrix
 ---------------------------------------------------------------------
-TODO
+
+*Diagonal Band*
+
+The $d^{\text{th}}$-diagonal-band of a matrix $A$ is the set of entries:
+$$
+    \text{d}^\text{th}\text{ diagonal band} = \{ A_{i,k} : i - k = d \}
+$$
+For example, the 0-diagonal-band is the main diagonal, and the 2-band of $A \in \mathbb{R}^3$ would be:
+$$
+    \left\{ A_{[0,2]}, A_{[1,1]}, A_{[2,0]} \right\}
+$$
+
+Upper-Triangular Bands :
+
+* Set of entries
+* $\left\{ A_{i,k} : i-k\leq 0 \right\}$
+
+Lower-Triangular Bands :
+
+* Set of entries
+* $\left\{ A_{i,k} : k \geq 0 \right\}$
+
+Lower Bandwidth :
+
+* Number
+* $d$ such that $A_{i,k}=0$ for $(i-k>d)$.
+* The lowest band before everything becomes 0s.
+
+Upper Bandwidth:
+
+* Number
+* $d$ such that $A_{i,k}=0$ for $(i-k<d)$.
+* The highest band before everything becomes 0s.
+
 
 
 Row Partition
