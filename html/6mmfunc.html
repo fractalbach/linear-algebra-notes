@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Linear Algebra Reference Sheet</title>
+<meta name="description" content="Awesome Reference Sheet for Linear Algebra! Ax=b! Check it out!"</description>
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {extensions: ["cancel.js"]},
+    });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_SVG"></script>
+</head>
+
+<body>
+
+<div id="paper">
+<header>
+<span id="HeaderTitle"> Linear Algebra Notes </span>
+<p><a id="GoToHomepageLink" href="../">Go To Homepage</a></p>
+</header>
+<main>
+<h1 id="matrix-multiplication-as-the-composition-of-linear-functions">Matrix Multiplication as the Composition of Linear Functions</h1>
+<p>Suppose there are two functions, <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>.</p>
+<p>Let function <span class="math inline">\(f\)</span> be defined as <span class="math inline">\(f: R^2 \to R^3\)</span> such that, <span class="math display">\[
+    f
+    \left(
+        \begin{bmatrix} x \\ y \end{bmatrix}
+    \right)
+    =
+    \begin{bmatrix}
+        0x + 1y \\
+        2x + 3y \\
+        4x + 5y
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        0 &amp; 1 \\
+        2 &amp; 3 \\
+        4 &amp; 5
+    \end{bmatrix}
+    \begin{bmatrix}
+        x \\ y
+    \end{bmatrix}
+\]</span> for some values <span class="math inline">\(x,y \in R\)</span>.</p>
+<p>Let function <span class="math inline">\(g\)</span> be defined as <span class="math inline">\(g: R^3 \to R^2\)</span> such that, <span class="math display">\[
+    g
+    \left(
+        \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+    \right)
+    =
+    \begin{bmatrix}
+        1x + 2y + 3z \\
+        4x + 5y + 6z
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        1 &amp; 2 &amp; 3 \\
+        4 &amp; 5 &amp; 6
+    \end{bmatrix}
+    \begin{bmatrix} x \\ y \\ z \end{bmatrix}
+\]</span> for some different values of <span class="math inline">\(x,y,z \in R\)</span>.</p>
+<p>You could write these as a composition of functions, <span class="math display">\[
+    f \circ g : R^2 \to R^3 \to R^2
+\]</span> which just simplifies to: <span class="math display">\[
+    f \circ g : R^2 \to R^2
+\]</span> So let’s create some example input so we can see what’s going on here. When composing functions, we don’t actually care what the input is, but it helps for understanding.</p>
+<p>Let our example input be a vector <span class="math inline">\(a \in R^2\)</span>. Let’s rewrite our composition of functions in a way that looks more familiar, <span class="math display">\[
+    (f \circ g )(a) = g(f(a))
+\]</span></p>
+<p>Take a look at what happens as the input is mapped to different sets through each function, <span class="math display">\[
+\begin{aligned}
+    a &amp; \in R^2 \\
+    f(a) &amp; \in R^3 \\
+    g(f(a)) &amp; \in R^2
+\end{aligned}
+\]</span> Looking back at the definition of <span class="math inline">\(f\)</span>, let’s plug in the input <span class="math inline">\(a\)</span>, <span class="math display">\[
+    f(a)=
+    \begin{bmatrix}
+        0 &amp; 1 \\
+        2 &amp; 3 \\
+        4 &amp; 5
+    \end{bmatrix}
+    \begin{bmatrix}
+        a_1 \\ a_2
+    \end{bmatrix}
+\]</span> Looking back at the definition of <span class="math inline">\(g\)</span>, let’s put in <span class="math inline">\(f(a)\)</span>, <span class="math display">\[
+    g(f(a)) =
+    \begin{bmatrix}
+        1 &amp; 2 &amp; 3 \\
+        4 &amp; 5 &amp; 6
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 &amp; 1 \\
+        2 &amp; 3 \\
+        4 &amp; 5
+    \end{bmatrix}
+    \begin{bmatrix}
+        a_1 \\ a_2
+    \end{bmatrix}
+\]</span> We have now created a new function!</p>
+<p>To understand why multiplying matrices is still the composition of functions, consider how it looks when we remove <span class="math inline">\(a\)</span>, and just focus on the matrices, <span class="math display">\[
+    f \circ g =
+    \begin{bmatrix}
+        1 &amp; 2 &amp; 3 \\
+        4 &amp; 5 &amp; 6
+    \end{bmatrix}
+    \begin{bmatrix}
+        0 &amp; 1 \\
+        2 &amp; 3 \\
+        4 &amp; 5
+    \end{bmatrix}
+\]</span> And finally, let’s say that <span class="math inline">\(A\)</span> represents the first matrix, and <span class="math inline">\(B\)</span> represents the second matrix, <span class="math display">\[
+    f \circ g =
+    A B
+\]</span></p>
+
+</main>
+<footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-22 <p></footer>
+</div>
+
+</body>
+
+</html>
