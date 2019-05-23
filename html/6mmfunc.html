@@ -63,13 +63,13 @@
     \end{bmatrix}
     \begin{bmatrix} x \\ y \\ z \end{bmatrix}
 \]</span> for some different values of <span class="math inline">\(x,y,z \in R\)</span>.</p>
-<p>You could write these as a composition of functions, <span class="math display">\[
-    f \circ g : R^2 \to R^3 \to R^2
+<p>You could write these as a <strong>composition of functions</strong>, <span class="math display">\[
+    g \circ f : R^2 \to R^3 \to R^2
 \]</span> which just simplifies to: <span class="math display">\[
-    f \circ g : R^2 \to R^2
+    g \circ f : R^2 \to R^2
 \]</span> So let’s create some example input so we can see what’s going on here. When composing functions, we don’t actually care what the input is, but it helps for understanding.</p>
 <p>Let our example input be a vector <span class="math inline">\(a \in R^2\)</span>. Let’s rewrite our composition of functions in a way that looks more familiar, <span class="math display">\[
-    (f \circ g )(a) = g(f(a))
+    (g \circ f)(a) = g(f(a))
 \]</span></p>
 <p>Take a look at what happens as the input is mapped to different sets through each function, <span class="math display">\[
 \begin{aligned}
@@ -103,7 +103,7 @@
     \end{bmatrix}
 \]</span> We have now created a new function!</p>
 <p>To understand why multiplying matrices is still the composition of functions, consider how it looks when we remove <span class="math inline">\(a\)</span>, and just focus on the matrices, <span class="math display">\[
-    f \circ g =
+    g \circ f =
     \begin{bmatrix}
         1 &amp; 2 &amp; 3 \\
         4 &amp; 5 &amp; 6
@@ -113,9 +113,9 @@
         2 &amp; 3 \\
         4 &amp; 5
     \end{bmatrix}
-\]</span> And finally, let’s say that <span class="math inline">\(A\)</span> represents the first matrix, and <span class="math inline">\(B\)</span> represents the second matrix, <span class="math display">\[
-    f \circ g =
-    A B
+\]</span> And finally, let’s say that <span class="math inline">\(G\)</span> represents the first matrix, and <span class="math inline">\(F\)</span> represents the second matrix, <span class="math display">\[
+    g \circ f =
+    GF
 \]</span></p>
 
 </main>

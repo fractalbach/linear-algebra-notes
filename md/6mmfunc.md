@@ -1,7 +1,7 @@
 Matrix Multiplication as the Composition of Linear Functions
 =====================================================================
 
-Suppose there are two functions, $f$ and $g$.  
+Suppose there are two functions, $f$ and $g$.
 
 Let function $f$ be defined as $f: R^2 \to R^3$ such that,
 $$
