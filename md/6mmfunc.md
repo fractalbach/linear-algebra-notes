@@ -47,19 +47,19 @@ $$
 $$
 for some different values of $x,y,z \in R$.
 
-You could write these as a composition of functions,
+You could write these as a **composition of functions**,
 $$
-    f \circ g : R^2 \to R^3 \to R^2
+    g \circ f : R^2 \to R^3 \to R^2
 $$
 which just simplifies to:
 $$
-    f \circ g : R^2 \to R^2
+    g \circ f : R^2 \to R^2
 $$
 So let's create some example input so we can see what's going on here.  When composing functions, we don't actually care what the input is, but it helps for understanding.
 
 Let our example input be a vector $a \in R^2$.  Let's rewrite our composition of functions in a way that looks more familiar,
 $$
-    (f \circ g )(a) = g(f(a))
+    (g \circ f)(a) = g(f(a))
 $$
 
 Take a look at what happens as the input is mapped to different sets through each function,
@@ -102,7 +102,7 @@ We have now created a new function!
 
 To understand why multiplying matrices is still the composition of functions, consider how it looks when we remove $a$, and just focus on the matrices,
 $$
-    f \circ g =
+    g \circ f =
     \begin{bmatrix}
         1 & 2 & 3 \\
         4 & 5 & 6
@@ -113,8 +113,8 @@ $$
         4 & 5
     \end{bmatrix}
 $$
-And finally, let's say that $A$ represents the first matrix, and $B$ represents the second matrix,
+And finally, let's say that $G$ represents the first matrix, and $F$ represents the second matrix,
 $$
-    f \circ g =
-    A B
+    g \circ f =
+    GF
 $$
