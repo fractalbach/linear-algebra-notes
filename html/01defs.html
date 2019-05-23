@@ -52,7 +52,7 @@
 <li><span class="math inline">\(a(x+y)=ax+ay\)</span></li>
 <li><span class="math inline">\((a+b)v=av+bv\)</span></li>
 </ul>
-<h2 id="linear-combination">Linear Combination</h2>
+<h2 id="linear-combinations">Linear Combinations</h2>
 <p>A linear combination of a list of vectors <span class="math inline">\(v_1, \ldots, v_n\)</span> is itself a vector, taking the form: <span class="math display">\[
     a_1v_1 + \ldots + a_mv_m
 \]</span> where each <span class="math inline">\(a_1, \ldots a_n \in \mathbb{R}\)</span></p>
@@ -65,7 +65,7 @@
         a_1,\ldots,a_m \in \mathbb{R}
     \right\}
 \]</span> If the span is equal to some space <span class="math inline">\(\text{span}(v_1,\ldots,v_n)=V\)</span>, then you could say that <span class="math inline">\(v_1,\ldots,v_n\)</span> <strong>spans</strong> <span class="math inline">\(V\)</span>.</p>
-<h2 id="linearly-independent">Linearly Independent</h2>
+<h2 id="linear-independence">Linear Independence</h2>
 <p>For <span class="math inline">\(v_1,\ldots,v_n \in V\)</span> and <span class="math inline">\(a_1,\ldots,a_n \in \mathbb{R}\)</span> such that: <span class="math display">\[
     a_1v_1 + \cdots + a_nv_n = 0
 \]</span> The list of vectors <span class="math inline">\(v_1,\ldots,v_n\)</span> is called <strong>linearly independent</strong> when <span class="math display">\[
@@ -148,24 +148,6 @@
 <p>Two vectors <span class="math inline">\(u,v \in V\)</span> are called <strong>orthogonal</strong> if the inner product between them is 0, <span class="math display">\[
     \langle u, v \rangle = 0
 \]</span> you could also say “<span class="math inline">\(u\)</span> is orthogonal to <span class="math inline">\(v\)</span>”. Orthogonal is another way of saying “at right angles to each other”, or “perpendicular”.</p>
-<h2 id="linear-map">Linear Map</h2>
-<p>A linear map from vector space <span class="math inline">\(V\)</span> to vector space <span class="math inline">\(W\)</span> is a function <span class="math inline">\(T:V\to W\)</span> with the following properties:</p>
-<p>Additivity:</p>
-<ul>
-<li><span class="math inline">\(T(u+v) = Tu + Tv\)</span> for all vectors <span class="math inline">\(u,w \in V\)</span></li>
-</ul>
-<p>Homogeneity:</p>
-<ul>
-<li><span class="math inline">\(T(av) = a(Tv)\)</span> for all <span class="math inline">\(a\in \mathbb{R}\)</span> and all <span class="math inline">\(v\in V\)</span></li>
-</ul>
-<h2 id="linear-maps-and-matrices">Linear Maps and Matrices</h2>
-<p>Suppose <span class="math inline">\(M\)</span> is a linear map <span class="math inline">\(f: \mathbb{R}^a \to \mathbb{R}^b\)</span>, then <span class="math inline">\(M\)</span> can be written as <span class="math inline">\(b\)</span>-by-<span class="math inline">\(a\)</span> matrix: <span class="math display">\[
-    \begin{bmatrix}
-        x_{1,1} &amp; \cdots &amp; x_{1, a} \\
-        \vdots &amp; \vdots &amp; \vdots \\
-        x_{b, 1} &amp; \cdots &amp; x_{b, a}
-    \end{bmatrix}
-\]</span></p>
 
 </main>
 <footer><p> Awesome notes made by Chris with the help of Python and Pandoc.</p><p>Date Generated: 2019-05-23 <p></footer>

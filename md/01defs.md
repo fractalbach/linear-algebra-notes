@@ -56,7 +56,7 @@ Distributive Properties:
 * $(a+b)v=av+bv$
 
 
-Linear Combination
+Linear Combinations
 ---------------------------------------------------------------------
 
 A linear combination of a list of vectors $v_1, \ldots, v_n$ is itself a vector, taking the form:
@@ -81,7 +81,7 @@ $$
 If the span is equal to some space $\text{span}(v_1,\ldots,v_n)=V$, then you could say that $v_1,\ldots,v_n$ **spans** $V$.
 
 
-Linearly Independent
+Linear Independence
 ---------------------------------------------------------------------
 
 For $v_1,\ldots,v_n \in V$ and $a_1,\ldots,a_n \in \mathbb{R}$ such that:
@@ -114,6 +114,7 @@ $$
     \ldots,
     \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}
 $$
+
 
 Dimension
 ---------------------------------------------------------------------
@@ -209,30 +210,3 @@ $$
     \langle u, v \rangle = 0
 $$
 you could also say "$u$ is orthogonal to $v$".  Orthogonal is another way of saying "at right angles to each other", or "perpendicular".
-
-Linear Map
----------------------------------------------------------------------
-
-A linear map from vector space $V$ to vector space $W$ is a function $T:V\to W$ with the following properties:
-
-Additivity:
-
-* $T(u+v) = Tu + Tv$ for all vectors $u,w \in V$
-
-Homogeneity:
-
-* $T(av) = a(Tv)$ for all $a\in \mathbb{R}$ and all $v\in V$
-
-
-
-Linear Maps and Matrices
----------------------------------------------------------------------
-
-Suppose $M$ is a linear map $f: \mathbb{R}^a \to \mathbb{R}^b$, then $M$ can be written as $b$-by-$a$ matrix:
-$$
-    \begin{bmatrix}
-        x_{1,1} & \cdots & x_{1, a} \\
-        \vdots & \vdots & \vdots \\
-        x_{b, 1} & \cdots & x_{b, a}
-    \end{bmatrix}
-$$
