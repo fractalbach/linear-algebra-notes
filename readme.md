@@ -16,6 +16,16 @@ Collection of Reference Sheets and Notes for Linear Algebra.  Includes definitio
 
 5. [**Tips and Tricks**](https://fractalbach.github.io/linear-algebra-notes/html/5tricks.html)
 
+
+
+Sections Still Being Worked on:
+
+6. [**Matrix Multiplication as the Composition of Linear Functions**](https://fractalbach.github.io/linear-algebra-notes/html/6mmfunc.html)
+
+7. [**Linear Maps**](https://fractalbach.github.io/linear-algebra-notes/html/7maps.html)
+
+
+
 ## How It's Made
 
 The "source" is markdown files found in `/md`.  That's where all the content is stored.
