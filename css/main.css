@@ -24,7 +24,7 @@ header{
 #GoToHomepageLink {
     padding: 0.25em;
     font-size: 1.25rem;
-    border: 1px solid lightblue;
+    /* border: 1px solid lightblue; */
 }
 a {
     color: darkblue;
